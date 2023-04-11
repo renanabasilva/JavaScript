@@ -14,14 +14,37 @@
     </style>
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
-    <p>Já me livrei da maldição!!</p>
-    <p>
-        Aula:
-        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})
-        document.write
+    <pre>
+        <p>
+            Aula 06:
 
-    </p>
+            O sinal de '+' serve tanto para cocatenar quanto para somar. Porém para somar é preciso utilizar números
+            
+            document.write()         -- Pro texto aparecer no html, mas não é salvo            
+
+            Number -> String         
+
+            Template String
+            `asdasd sdasd <strong>${}</strong>` -- Para a variavel ficar dentro do texto DEVE-SE utilizar CRASE e não aspas.
+
+            Transformações:
+            s.length         -- Quantos caracteres a string possui
+            s.toUpperCase()  -- Fica tudo em maiúscula
+            s.toLowerCase()  -- Fica tudo em minúsculas
+            String(n)        -- Transforma em String
+            n.toString()     -- Transforma em String
+
+            Transformações números:
+            Number.parseFloat(num)   -- Transforma uma string p/ tipo número real
+            Number.parseInt(num)     -- Transforma uma string p/ tipo número inteiro
+            Number(num)              -- Transforma uma string p/ tipo número
+            n1.toFixed(2)                                                     -- Fica com duas casas decimais
+            n1.replace('.', '.')                                              -- Troca o . por ,
+            n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})  -- Faz conversão para o formato de moeda.
+
+
+        </p>
+    </pre>
     <script>
         var nome = window.prompt('Qual é seu nome? ')
         // var sal = Number.parseFloat(window.prompt('Qual é seu salário? '))

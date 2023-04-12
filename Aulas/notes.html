@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações do Curso de JavaScript</title>
+    <style>
+        body {
+            background-color: black;
+            /* background-color: rgb(172, 172, 255); */
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.4em;
+        }
+    </style>
+</head>
+<body>
+    <pre>        
+        <h2><mark>Aula 05: Variáveis e Tipos Primitivos</mark></h2>
+        <p>
+            <strong>Alertas</strong>
+            window.alert('lorem')     -- Cria um alerta na tela do navegador
+            window.confirm('lorem')   -- Exibe uma mensagem em forma de alerta e pergunta se deseja confirmar ou cancelar
+            window.prompt('lorem')    -- Cria um campo em forma de alerta para o usuário dar entrada
+
+            <strong>Comentários</strong>
+            // Comentários
+            /* Comentários */
+
+            <strong>Variáveis</strong>
+            Variáveis podem ser declaradas por:
+            var e let
+            ex: var nome = texto
+
+            Regras p/ variáveis:
+            -> Podem começar com letras, $ ou _ 
+            -> <strong>Não</strong> podem começar com números
+            -> É possível utilizar letras e números
+            -> É possível utilizar acentos e símbolos
+            -> <strong>Não</strong> podem conter espaços
+            -> <strong>Não</strong> podem ser palavras reservadas
+            -> Letras maiúsculas e minúsculas <strong>tem</strong> diferença
+
+            <strong>Tipos primitivos</strong>
+            - Number (Infinity e NaN)
+            - String
+            - Boolean
+            - Null
+            - Undefined
+            - Object (Array)
+            - Function
+
+            * Number engloba os números reais
+            ** Em JS, null é um objeto                
+        </p>
+        <hr>
+        <h2><mark>Aula 06: Tratamento de Dados</mark></h2>
+        <p>
+            O sinal de '+' serve tanto para cocatenar quanto para somar. Porém para somar é preciso utilizar números
+            
+            document.write()         -- Pro texto aparecer no html, mas não é salvo
+            Number -> String
+            Template String
+            `asdasd sdasd <strong>${}</strong>` -- Para a variavel ficar dentro do texto DEVE-SE utilizar CRASE e não aspas.
+            Transformações:
+            s.length         -- Quantos caracteres a string possui
+            s.toUpperCase()  -- Fica tudo em maiúscula
+            s.toLowerCase()  -- Fica tudo em minúsculas
+            String(n)        -- Transforma em String
+            n.toString()     -- Transforma em String
+            Transformações números:
+            Number.parseFloat(num)   -- Transforma uma string p/ tipo número real
+            Number.parseInt(num)     -- Transforma uma string p/ tipo número inteiro
+            Number(num)              -- Transforma uma string p/ tipo número
+            n1.toFixed(2)                                                     -- Fica com duas casas decimais
+            n1.replace('.', '.')                                              -- Troca o . por ,
+            n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})  -- Faz conversão para o formato de moeda.
+        </p>
+        <hr>
+        <h2><mark>Aula 07 e 08: Operadores</mark></h2>
+        <p>
+            <strong>Tipos de operadores</strong>
+
+        </p>
+    </pre>
+</body>
+</html>

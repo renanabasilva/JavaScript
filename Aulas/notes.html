@@ -13,6 +13,46 @@
             font-family: 'Courier New', Courier, monospace;
             font-size: 1.4em;
         }
+
+        .listc1 {
+            margin-left: 150px;
+            width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .listc1 > li {
+            flex-basis: calc(100% - 10px); /* 50% do espaço menos a margem entre as colunas */
+            margin-bottom: 20px;
+        }
+
+        .listc2 {
+            margin-left: 150px;
+            width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .listc2 > li {
+            flex-basis: calc(50% - 10px); /* 50% do espaço menos a margem entre as colunas */
+            margin-bottom: 20px;
+        }
+
+        .listc3 {
+            margin-left: 150px;
+            width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;            
+            }
+
+        .listc3 > li {
+            flex-basis: calc(33% - 10px); /* 50% do espaço menos a margem entre as colunas */
+            margin-bottom: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -81,7 +121,95 @@
         <h2><mark>Aula 07 e 08: Operadores</mark></h2>
         <p>
             <strong>Tipos de operadores</strong>
+            <ul class="listc2">
+                <li>Aritméticos</li>
+                <li>Atribuição</li>
+                <li>Relacionais</li>
+                <li>Lógicos</li>
+                <li>Ternários</li>
+            </ul>
+            <strong>Operadores Aritméticos</strong>            
+            <ul class="listc2">                
+                <li>+  => Soma</li>
+                <li>-  => Subtração</li>
+                <li>*  => Multiplicação</li>
+                <li>/  => Divisão Real </li>
+                <li>%  => Resto da divisão</li>
+                <li>** => Potência</li>
+            </ul>
+            * P/ divisão inteira utilizar: Math.floor(v1/v2)
 
+
+            <strong>Ordem de Precedência</strong>
+            <ul class="listc1">
+                <li>1. ()</li>
+                <li>2. **</li>
+                <li>3. * / %</li>
+                <li>4. + -</li>
+            </ul>
+
+            <strong>Auto Atribuição</strong>
+            <ul class="listc2">
+                <li>=   => n = 1</li>
+                <li>+=  => n = n + 1</li>
+                <li>-=  => n = n - 1</li>
+                <li>*=  => n = n * 1</li>
+                <li>/=  => n = n / 1</li>
+                <li>**= => n = n ** 1</li>
+                <li>%=  => n = n % 1</li>
+            </ul>
+
+            <strong>Incremento</strong>
+            pós-incremento
+
+                x++ => x+=1 => x = x+1
+                x-- => x-=1 => x = x-1
+
+            pré-incremento
+
+                ++x
+                --x
+
+            <strong>Operadores Relacionais</strong>
+            <ul class="listc2">
+                <li>>  => Maior que</li>
+                <li><  => Menor que</li>
+                <li>>= => Maior ou igual</li>
+                <li><= => Menor ou igual</li>
+                <li>== => Igualdade</li>
+                <li>!= => Diferente de</li>
+            </ul>
+
+            *  P/ expressões relacionais, o resultado será sempre um valor booleano. (True/False)
+            ** Os operadores relacionais não testam o tipo da variável (String, Number, etc)
+
+            Para testar o tipo e o valor da variável, se utiliza <strong>Operadores de Identidade</strong>
+            que também podem ser chamados de Operadores de igualdade restrita.
+
+                === => Estritamente igual
+                !== => Estritamente <strong>não</strong> igual
+
+            <strong>Operadores Lógicos</strong>
+            <ul class="listc1">
+                <li>!  => Negação => not</li>
+                <li>&& => Conjunção => and</li>
+                <li>|| => Disjunção => or</li>
+            </ul>
+            * true e false em JS são escrito com letra minúscula.
+
+            <strong>Precedência de Operadores</strong>
+            Aritméticos -> Relacionais -> Lógicos
+
+            <strong>Operador Ternário</strong>
+
+            ? :
+            <p style="display: inline-block; background-color: gray; padding: 5px;">teste</p> ? <p style="display: inline-block; background-color: gray; padding: 5px;">true</p> : <p style="display: inline-block; background-color: gray; padding: 5px;">false</p>
+
+            Exemplo:
+
+            var idade = 19
+            var resultado = <p style="display: inline-block; background-color: gray; padding: 5px;">idade >= 18</p> ? <p style="display: inline-block; background-color: gray; padding: 5px;">'Menor'</p> : <p style="display: inline-block; background-color: gray; padding: 5px;">'Maior'</p>
+            resultado == 'Maior'            
         </p>
     </pre>
 </body>

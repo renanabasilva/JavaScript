@@ -211,6 +211,124 @@
             var resultado = <p style="display: inline-block; background-color: gray; padding: 5px;">idade >= 18</p> ? <p style="display: inline-block; background-color: gray; padding: 5px;">'Menor'</p> : <p style="display: inline-block; background-color: gray; padding: 5px;">'Maior'</p>
             resultado == 'Maior'            
         </p>
+        <hr>
+        <h2><mark>Aula 09 e 10: DOM</mark></h2>
+        <p>
+            <strong>DOM</strong> = Document Object Model
+
+            => É um conjunto de objetos do navegador que dá acesso aos componentes internos do website.
+
+            Árvore DOM
+
+                                    window
+                                &#11019;     &#8595;     &#11018;
+                           location document history
+                                       &#8595;
+                                     html
+                                   &#11019;     &#11018;
+                                 head     body
+                                 &#11019;           &#11018;
+                          meta tittle       h1, p, div
+                                                &#8595;
+                                              strong 
+
+            window.document.write('lorem')                      => Escreve no html (temporário)
+            window.document.write(window.document.charset)      => Mostra o set de caracteres
+            window.document.write(window.navigator.appName)     => Netscape
+            window.document.URL                                 => Mostra a URL
+
+
+            Cada item da árvore DOM é chamado de <strong>elemento</strong>
+
+            <strong>Métodos de acesso aos elementos:</strong>
+
+            <ul class="listc2">
+                <li>por Marca</li>
+                <li>por ID</li>
+                <li>por Nome</li>
+                <li>por Classe</li>
+                <li>por Seletor</li>
+            </ul>
+
+
+            <strong>Por Marca</strong>
+
+                getElementsByTagName()
+
+                * seleciona mais de um objeto
+
+                Ex.: getElementsByTagName('p')[1]
+
+                nome.innerHTML  => pega o texto c/ formatação
+                nome.innerText  => pega o texto s/ formatação
+
+                Ex.:
+                var p1 = window.document.getElementsByTagName('p')[0]
+                window.document.write('Está escrito assim: ' + p1.innerText)         => Vai replicar o texto do primeiro parágrafo
+                p1.style.color = 'blue'
+
+
+
+            <strong>Por ID</strong>
+
+                getElementById()
+
+                * Acessa o elemento com base em seu ID exclusivo
+
+                Ex.: 
+                    &lt;div id="msg"&gt;Texto&lt;/div&gt;       => (html)
+                    var d = document.getElementById('msg')
+                    d.style.background = 'green'
+                    d.innerText = 'Estou aguardando'            => Troca o conteúdo da div para: 'Estou aguardando'
+                ou:
+                    window.document.getElementById('msg').innerText = 'Estou aguardando'
+
+
+
+            <strong>Por Nome</strong>
+                
+                getElementsByName()
+
+                * O objeto precisa ter a propriedade Name
+                ** Também é possível ter mais de um objeto
+
+                Ex.: 
+                    &lt;div name="msg"&gt;Texto&lt;/div&gt;       => (html)
+                    var d = document.getElementsByName('msg')[0]
+                    d.style.background = 'green'
+                    d.innerText = 'Estou aguardando'            => Troca o conteúdo da div para: 'Estou aguardando'
+
+
+
+            <strong>Por Classe</strong>
+
+                getElementsByClassName()
+
+                * Mais de um objeto
+
+                Ex.: 
+                    &lt;div class="my-class"&gt;Texto&lt;/div&gt;       => (html)
+                    var d = document.getElementsByClassName('msg')[0]
+                    d.style.background = 'green'
+                    d.innerText = 'Estou aguardando'            => Troca o conteúdo da div para: 'Estou aguardando'
+
+                
+
+            <strong>Por Seletor</strong>
+
+                document.querySelector('my-class') - Retorna a primeira ocorrência de um elemento DOM que corresponda a um seletor CSS específico
+
+                document.querySelectorAll() - Retorna 0
+
+                Ex.: 
+                    &lt;div id="msg" class="my-class"&gt;Texto&lt;/div&gt;       => (html)
+                    var d = document.querySelector('div#msg') ou var d = document.querySelector('div.my-class')
+                    d.style.background = 'green'            
+
+
+            
+            
+        </p>
     </pre>
 </body>
 </html>

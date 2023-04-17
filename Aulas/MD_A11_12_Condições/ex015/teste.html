@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="radio" name="option1" value="A"> Opção A
+    <input type="radio" name="option1" value="B"> Opção B
+
+    <button onclick="getResult()">Obter Resultado</button>
+
+    <p id="result"></p>
+
+    <script>
+        function getResult() {
+        var option1 = document.querySelector('input[name="option1"]:checked').value;
+        var result = option1
+        document.getElementById("result").innerHTML = result;
+  }
+    </script> -->
+
+    <!-- <form>
+        <input type="radio" name="gender" value="male">Male<br>
+        <input type="radio" name="gender" value="female">Female<br>
+        <input type="button" value="Submit" onclick="submitForm()">
+      </form>
+      
+      <script>
+      function submitForm() {
+        var gender = document.querySelector('input[name="gender"]:checked');
+        if (gender === undefined) {
+          alert("Por favor, selecione uma opção");
+          return;
+        }
+        // Restante do código para enviar o formulário ou realizar outras ações necessárias
+      }
+      </script> -->
+
+      <form>
+        <input type="radio" name="gender" value="male">Male<br>
+        <input type="radio" name="gender" value="female">Female<br>
+        <input type="button" value="Submit" onclick="submitForm()">
+      </form>
+      
+      <script>
+      function submitForm() {
+        var gender = document.querySelector('input[name="gender"]:checked');
+        if (!gender) {
+          alert("Por favor, selecione uma opção");
+          return;
+        }
+        // Restante do código para enviar o formulário ou realizar outras ações necessárias
+      }
+      </script>
+</body>
+</html>
+
+
+

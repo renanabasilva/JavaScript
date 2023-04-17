@@ -23,7 +23,7 @@
         }
 
         .listc1 > li {
-            flex-basis: calc(100% - 10px); /* 50% do espaço menos a margem entre as colunas */
+            flex-basis: calc(100% - 10px); 
             margin-bottom: 20px;
         }
 
@@ -45,11 +45,12 @@
             width: 900px;
             display: flex;
             flex-wrap: wrap;
+            
             justify-content: space-between;            
             }
 
         .listc3 > li {
-            flex-basis: calc(33% - 10px); /* 50% do espaço menos a margem entre as colunas */
+            flex-basis: calc(33% - 10px); 
             margin-bottom: 20px;
         }
 
@@ -323,11 +324,83 @@
                 Ex.: 
                     &lt;div id="msg" class="my-class"&gt;Texto&lt;/div&gt;       => (html)
                     var d = document.querySelector('div#msg') ou var d = document.querySelector('div.my-class')
-                    d.style.background = 'green'            
+                    d.style.background = 'green' 
+                    
 
 
+            <strong>Eventos DOM</strong>
+
+            <ul class="listc3">
+                <li>mouseenter</li>
+                <li>mouseout</li>
+                <li>mousedown</li>
+                <li>mouseup</li>
+                <li>click</li>
+                <li>mousemove</li>
+            </ul>
+
+            Google -> JS DOM events list => todos eventos DOM
+
+            Funções são um conjunto de códigos que serão executados apenas quando um determinado evento ocorrer.
+
+            function ação(parâmetros) {
+                bloco
+            }
+
+            &lt;div id="area" onclick= "clicar()&gt;Lorem&lt;/div&gt;
+
+            function clicar(){
+                var a = document.getElementById('area')
+                a.innerText= 'Clicou'
+            }
+
+            * Para tirar os eventos do html e colocar apenas no JS, basta utilizar o <strong>listener</strong>
+
+            Ex.: a.addEventListener('click', clicar)  ((ex.006))
+
+
+            ** Para encontrar erros, pode-se abrir o DevTools (inspecionar) da página.
+        </p>
+        <hr>
+        <h2><mark>Aula 11 e 12: Condições</mark></h2>
+        <p>
+            if (condição) {
+                bloco
+            } else if {
+                bloco
+            } else {
+                bloco
+            }
+
+            console.log('lorem') => funciona como um print no node.js. Precisa da extenção node exec
+
+            * Todo valor vindo de um input é preciso transformar com .value
+
             
+
+            <strong>Condição Multipla</strong>
+
+            * Todos os case precisam do <strong>break</strong> no final!!
+
+            switch (expressão){
+                case valor1:
+                    bloco
+                    break
+                case valor2:
+                    bloco
+                    break
+                case valor3:
+                    bloco
+                    break
+                default:
+                    bloco
+                    break      ** O break no final é opcional.
+            }
+
+            *** switch funciona com números inteiros e com strings.
+
             
+
         </p>
     </pre>
 </body>

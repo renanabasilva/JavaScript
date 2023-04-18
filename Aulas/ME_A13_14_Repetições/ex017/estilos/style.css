@@ -19,7 +19,6 @@ main {
     background-color: white;
     margin: auto;    
     width: 500px;
-    height: 200px;
     border-radius: 15px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.397);
 }    
@@ -29,17 +28,9 @@ section{
     font-size: 1.1em;
 }
 
-div#txt {
-    text-align: center;
-}
-
-div#img {
-    background-size: cover;
-    margin: auto;
-    margin-top: 20px;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
+#res {
+    display: inline-block;
+    width: 150px;
 }
 
 footer {                        

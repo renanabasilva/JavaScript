@@ -13,9 +13,15 @@ function contar(){
             np = 1
         }
         res.innerHTML = 'Contando: <br>'
-        for (var c = ni; c <= nf; c += np){
-            res.innerHTML += `${c} &#x1F449; `
-        }    
-        res.innerHTML += (`&#x1F3C1;`)        
+        if (ni > nf){
+            for (var c = ni; c >= nf; c -= np){
+            res.innerHTML += `${c} &#x1F449; `         
+            }
+        } else {
+            for (var c = ni; c <= nf; c += np){
+            res.innerHTML += `${c} \u{1F449} `
+            } 
+        } 
+        res.innerHTML += (`&#x1F3C1; ✌`)        
     }   
 }                

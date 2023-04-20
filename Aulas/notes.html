@@ -501,11 +501,33 @@
                         in  = dentro
                         num = array
 
-            Para retornar o indice de um elemento:
+            Tratamento de arrays:
 
-                num.indexOf(4)
+                num.indexOf(4)      -> Retorna o indice em que o número 4 se encontra (posição dentro do array). Caso não exista o valor dentro do array, retornará -1.
 
-                * Retorna o indice em que o número 4 se encontra (posição dentro do array). Caso não exista o valor dentro do array, retornará -1.
+                num.includes(8)     -> True -> Verifica se o 8 já está no array.
+
+                Math.max(...num)    -> Retorna o maior valor do array num
+
+                Math.min(...num)    -> Retorna o menor valor do array num
+
+                var total = num.reduce((acumulador, valorAtual) => acumulador + valorAtual)         -> Soma todos os valores de um array
+
+                var valorInicial = 10
+                var total10 = num.reduce((acumulador, valorAtual) => acumulador + valorAtual, valorInicial)         -> Soma todos os valores do array e soma um valor inicial (10)
+
+            
+
+            *** Para limpar a caixa de um input e voltar o cursor após clicar em um botão, basta definir o valor para '' (vazio), e colocar o focus.
+
+            Ex.:
+                var input = document.getElementsByTagName('input')
+
+                input.focus()             -> coloca o cursor na caixa do input
+                input.value = ''          -> 'esvazia' o valor da caixa do input
+                input.select()            -> seleciona o conteúdo da caixa do input
+
+                
         </p>
         <hr>
         <h2><mark>Aula 16: Funções</mark></h2>
@@ -560,7 +582,55 @@
                 }
                 
                 console.log(fatorial(5))
+
+
+            Para chamar uma função por um botão através do JS apenas, pode se utilizar addEventListener
+
+            Ex.:
+                botao.addEventListener('click', nomeFunção)
+
+            Para chamar a mesma função através da tecla 'Enter' (normalmente após inserir um dado em um input)
+
+            Ex.: 
+                var input = document.getElementById('input')
+                var botao = document.getElementById('botao')
+                input.addEventListener('keyup', function(event){
+                    if (event.key === 'Enter'){
+                 // ou (event.keyCode === 13){
+                        event.preventDefault()
+                        botao.click()
+                    }
+                })
             </p>
-        </pre>
+        <hr>
+        <h2><mark>Considerações finais</mark></h2>
+        <p>
+            <strong>Para estudar:</strong>
+            
+            • Funções:
+                - Arrow Functions
+                - Callbacks
+                - Funções Anônimas
+                - IIFE            
+            • JavaScript Funcional
+            • Objectos (POO)
+            • Modularização
+            • RegEx
+            • JSON
+            • AJAX
+            • NodeJS
+            • Frameworks
+                - JQuery
+                - Vue.JS
+                - Angular
+        </p>
+        <hr>
+        <h2><mark>Introdução a Objetos</mark></h2>
+        <p>
+            
+        </p>
+        
+
+    </pre>
 </body>
 </html>

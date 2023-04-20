@@ -451,10 +451,116 @@
             
             * Para analisar o progresso passo a passo, basta utilizar o Debug.
 
-            * Para utilizar emojis com JS, pode se utilizar o comando &#x-----; (ex: &#x 1F449;) ou também dentro de um format o comando: \u{1F449}
+            * Para utilizar emojis com JS, pode se utilizar o comando &#x-----; (ex: &#x 1F449;) ou também dentro de um format o comando: \u{1F449}            
+        </p>
+        <hr>
+        <h2><mark>Aula 15: Variáveis Compostas</mark></h2>
+        <p>
+            -> Variáveis SIMPLES só armazenam um valor por vez.
+            -> Variáveis COMPOSTAS são capazes de armazenar vários valores em uma mesma estrutura.
+
+            Cada elemento de um <strong>array</strong> (vetor ou váriável composta) é composto por um <strong>valor</strong> (conteúdo)  e uma <strong>chave</strong> (indice) de identificação.
+            
+            Ex.: var num = [5, 8, 4, 7]
+
+            Para adicionar em um indice específico do vetor:
+
+                num[3] = 6   -> Isso faz com que o valor 7 do exemplo seja substituido pelo 6
+
+            Para acrescentar um valor na ultima posição: (igual .append() em python)
+
+                num.push(7)
+
+                num == [5, 8, 4, 6, 7]
+
+            Para saber quantos elementos possui um array:
+
+                num.length
+
+            Para ordenar os elementos do vetor em ordem <strong>alfabética</strong>:
+
+                num.sort()
+
+                num.sort(function(a, b){return a - b})      -> Para colocar em ordem crescente numérica.
+                num.sort(function(a, b){return b - a})      -> Para colocar em ordem decrescente.
+
+            Para inverter a ordem do array: (primeiro vira ultimo e ultimo vira primeiro)
+
+                num.reverse()
+            
+
+
+            <strong>Estrutura <u>for</u> para arrays e objects: </strong>
+
+                for(let pos in num) {
+                    bloco
+                }
+
+                Onde:   let = var 
+                        pos = contador
+                        in  = dentro
+                        num = array
+
+            Para retornar o indice de um elemento:
+
+                num.indexOf(4)
+
+                * Retorna o indice em que o número 4 se encontra (posição dentro do array). Caso não exista o valor dentro do array, retornará -1.
+        </p>
+        <hr>
+        <h2><mark>Aula 16: Funções</mark></h2>
+        <p>
+            • Funções são <u>ações</u> executadas assim que são <u>chamadas</u> ou em decorrência de algum <u>evento</u>.
+            • Uma Função pode receber <u>parâmetros</u> e retornar um <u>resultado</u>.
+
+            Ex.: 
+                function parimpar(n){           -> n é o parâmetro <strong>formal</strong>
+                    if (n % 2 == 0){
+                        return 'Par'
+                    } else {
+                        return 'Impar'
+                    }
+                }
+
+                let res parimpar(11)            -> 11 é o parâmetro <strong>real</strong>
+
+
+
+            <strong>Parâmetros Opcionais</strong>
+
+                function soma(n1=0, n2=0){      -> Quando o valor do parâmetro não for declarado, considerará 0 para executar a função.
+                    return n1 + n2
+                }
+
+                console.log(soma(2))
+
 
             
-        </p>
-    </pre>
+            <strong>É possível colocar uma função dentro de uma variável</strong>
+
+                let v = function(x){
+                    return x*2
+                }
+                
+                console.log(v(5))  ==> 10
+
+            
+            <strong>** Estudar ARROW Function</strong>
+
+
+
+            <strong>Função Recursiva</strong>
+
+                function fatorial(n){
+                    if (n == 1) {
+                        return 1
+                    } else {
+                        return n*fatorial(n-1)      -> A função chama ela mesma (recursividade).
+                    }
+                }
+                
+                console.log(fatorial(5))
+            </p>
+        </pre>
 </body>
 </html>

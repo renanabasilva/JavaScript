@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex005</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Dobro, triplo e raiz de um número</P>
+    <script>
+        var num = window.prompt('Digite um número:')
+
+        num = Number.parseFloat(num)
+
+        document.write(`O dobro de ${num} é ${num * 2}, o triplo é ${num*3} e a raíz é ${Math.pow(num, (1/2))}<br>`)
+        document.write(`A raíz de ${num} é ${num**(1/2)}`)
+    </script>
+</body>
+</html>

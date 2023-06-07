@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex005</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Calculo da média de um aluno</P>
+    <script>
+        var nome = window.prompt('Digite o nome do aluno:')
+        var n1 = window.prompt('Digite a primeira nota:')
+        var n2 = window.prompt('Digite a segunda nota:')
+
+        n1 = Number.parseFloat(n1)
+        n2 = Number.parseFloat(n2)
+
+        document.write(`A média do aluno ${nome} é: ${(n1+n2)/2} <br>`)
+    </script>
+</body>
+</html>

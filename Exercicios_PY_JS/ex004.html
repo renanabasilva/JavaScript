@@ -17,7 +17,7 @@
     <P>Dissecando uma variável</P>
     <script>
         // var x = window.prompt('Digite algo: ')
-        var y = 23
+        var y = "xupeta de baleia"
 
         var variavel = typeof x
         var variavel2 = typeof y
@@ -28,14 +28,15 @@
         document.write(`<p> O que foi digitado é do tipo ${variavel}</p>`)
         document.write(`<p> O que está no código é do tipo ${variavel2}</p>`)
 
-        document.write(`O valor do código é ${y}`)
-        document.write(`${y} é um número? ${Number.isInteger(y)}`)
+        document.write(`O valor do código é ${y}<br>`)
+        document.write(`${y} é um número? ${Number.isInteger(y)}<br>`)
 
-        // var n1 = Number.parseFloat(window.prompt('Digite um número:'))
-        // var n2 = Number.parseFloat(window.prompt('Digite mais um número:'))
-        // var s = n1 + n2 
-        // window.alert(`A soma entre ${n1} e ${n2} vale ${s}`)
-        // document.write('<p>`A soma entre os valores dá `</p>')
+        if (y == y.toUpperCase()) {
+            document.write(`${y} é maiúsculo<br>`)
+        }
+        if (y == y.toLowerCase()){
+            document.write(`${y} é minusculo`)
+        }
     </script>
 </body>
 </html>

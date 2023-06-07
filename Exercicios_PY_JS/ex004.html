@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex004</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P>Dissecando uma variável</P>
+    <script>
+        // var x = window.prompt('Digite algo: ')
+        var y = 23
+
+        var variavel = typeof x
+        var variavel2 = typeof y
+
+        document.write("<p> Tipo da variável</p><br>")
+        document.write(`<p> O que foi digitado é do tipo ${typeof x}</p>`)
+        document.write(`<p> O que está no código é do tipo ${typeof y}</p>`)
+        document.write(`<p> O que foi digitado é do tipo ${variavel}</p>`)
+        document.write(`<p> O que está no código é do tipo ${variavel2}</p>`)
+
+        document.write(`O valor do código é ${y}`)
+        document.write(`${y} é um número? ${Number.isInteger(y)}`)
+
+        // var n1 = Number.parseFloat(window.prompt('Digite um número:'))
+        // var n2 = Number.parseFloat(window.prompt('Digite mais um número:'))
+        // var s = n1 + n2 
+        // window.alert(`A soma entre ${n1} e ${n2} vale ${s}`)
+        // document.write('<p>`A soma entre os valores dá `</p>')
+    </script>
+</body>
+</html>

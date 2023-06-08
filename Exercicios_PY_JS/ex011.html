@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex011</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Calcular a área de uma parede e quantidade de tinta para pinta-la (1l p/ 2m²)</P>
+    <script>
+        let larg = Number.parseFloat(window.prompt('Qual a largura da parede em metros? '))
+        let altu = Number.parseFloat(window.prompt('Qual a altura da parede em metros? '))
+        let area = larg*altu
+
+        document.write(`A parede possuí ${area} m². <br>Para uma área de ${area} é preciso de ${area/2} litros de tinta.`)
+    </script>
+</body>
+</html>

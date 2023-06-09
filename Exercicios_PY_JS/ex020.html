@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex020</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Sorteio de apresentação de trabalho aleatória</P>
+    <script>
+        let aluno1 = window.prompt('Aluno 1:')
+        let aluno2 = window.prompt('Aluno 2:')
+        let aluno3 = window.prompt('Aluno 3:')
+        let aluno4 = window.prompt('Aluno 4:')
+
+        let lista = [aluno1, aluno2, aluno3, aluno4]
+        let listaS = shuffle(lista)
+        document.write(`A ordem da apresentação será: ${listaS}`)
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+    </script>
+</body>
+</html>

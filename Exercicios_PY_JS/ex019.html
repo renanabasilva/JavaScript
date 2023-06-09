@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex019</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Sorteio de nome para apagar o quadro</P>
+    <script>
+        let aluno1 = window.prompt('Aluno 1:')
+        let aluno2 = window.prompt('Aluno 2:')
+        let aluno3 = window.prompt('Aluno 3:')
+        let aluno4 = window.prompt('Aluno 4:')
+
+        let lista = [aluno1, aluno2, aluno3, aluno4]
+        document.write(`O aluno escolhido foi ${choice(lista)}`)
+
+        function choice(array) {
+            let index = Math.floor(array.length * Math.random())
+            return array[index]
+        }
+
+    </script>
+</body>
+</html>

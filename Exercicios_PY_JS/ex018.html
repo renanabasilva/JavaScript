@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex018</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Lê o ângulo e dá sen, cos e tang</P>
+    <script>
+        let angulo = Number.parseFloat(window.prompt("Digite um ânuglo para saber o seno, cosseno e tangente:"))
+        document.write(`O seno de ${angulo} é ${(Math.sin(degtorad(angulo))).toFixed(2)}<br>`)
+        document.write(`O coseno de ${angulo} é ${(Math.cos(degtorad(angulo))).toFixed(2)}<br>`)
+        document.write(`A tangente de ${angulo} é ${(Math.tan(degtorad(angulo))).toFixed(2)}`)
+
+        function degtorad(deg){
+            let pi = Math.PI
+            return deg * (pi/180)
+        }
+    </script>
+</body>
+</html>

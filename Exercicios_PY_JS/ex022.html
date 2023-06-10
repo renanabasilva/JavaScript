@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex022</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Ler nome completo e mostrar:<br></P>
+    <P># Todas as letras maiúsculas<br></P>
+    <P># Todas as letras minúsculas<br></P>
+    <P># Quantas letras ao total (Sem contar espaços)<br></P>    
+    <P># Quantas letras tem o primeiro nome<br></p>
+    <script>
+        let nome = window.prompt('Digite seu nome completo:')
+        let nomeSplit = nome.split(" ")
+        let nospace = nome.replace(/ /g, "")
+        // o sinalizador g (global) para capturar todas as ocorrências de um valor e o sinalizador i (insensibilidade ao caso) para ignorar a diferenciação entre maiúsculas e minúsculas.
+        
+        document.write(`${nomeSplit[0]}, seu nome todo maiúsculo: ${nome.toUpperCase()}<br>`)
+        document.write(`${nomeSplit[0]}, seu nome todo minúsculo: ${nome.toLowerCase()}<br>`)       
+        document.write(`${nomeSplit[0]}, seu primeiro nome tem ${nomeSplit[0].length} letras<br>`)
+        document.write(`${nomeSplit[0]}, seu nome inteiro tem ${nospace.length} letras<br>`)
+    </script>
+</body>
+</html>

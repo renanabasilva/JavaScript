@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex023</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Ler um número de 0 a 9999 e mostrar os dígitos separados (unidade, dezena, centena e milhar)</p>
+    <script>
+        let numS = window.prompt("Digite um número de 0 a 9999:")
+        let numN = Number.parseFloat(numS)
+
+        document.write('Em formato de string: <br>')
+        document.write(`Unidade: ${}`)
+        document.write(`Dezena: ${}`)
+        document.write(`Centena: ${}`)
+        document.write(`Milhar: ${}`)
+
+        document.write('Em formato de número:<br>')
+        document.write(`Unidade: ${numN%10}<br>`)
+        document.write(`Dezena: ${(numN%100)/10}<br>`)
+        document.write(`Centena: ${(numN%1000)/100}<br>`)
+        document.write(`Milhar: ${(numN%10000)/1000}<br>`)
+
+    </script>
+</body>
+</html>

@@ -20,16 +20,16 @@
         let numN = Number.parseFloat(numS)
 
         document.write('Em formato de string: <br>')
-        document.write(`Unidade: ${}`)
-        document.write(`Dezena: ${}`)
-        document.write(`Centena: ${}`)
-        document.write(`Milhar: ${}`)
+        document.write(`Unidade: ${numS.slice(-1)}<br>`)        // Funciona assim apenas para o último número
+        document.write(`Dezena: ${numS.charAt(numS.length-2)}<br>`)
+        document.write(`Centena: ${numS.charAt(numS.length-3)}<br>`)
+        document.write(`Milhar: ${numS.charAt(numS.length-4)}<br>`)
 
-        document.write('Em formato de número:<br>')
+        document.write('<br>Em formato de número:<br>')
         document.write(`Unidade: ${numN%10}<br>`)
-        document.write(`Dezena: ${(numN%100)/10}<br>`)
-        document.write(`Centena: ${(numN%1000)/100}<br>`)
-        document.write(`Milhar: ${(numN%10000)/1000}<br>`)
+        document.write(`Dezena: ${Math.trunc((numN%100)/10)}<br>`)
+        document.write(`Centena: ${Math.trunc((numN%1000)/100)}<br>`)
+        document.write(`Milhar: ${Math.trunc((numN%10000)/1000)}<br>`)
 
     </script>
 </body>

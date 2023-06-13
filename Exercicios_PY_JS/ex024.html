@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex024</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Cidade começa com o nome "Santo"?</p>
+    <script>
+        let nome = window.prompt('Digite o nome da sua cidade:')
+        nome = nome.toLowerCase()
+        pnome = nome.split(" ")
+        document.write(`Sua cidade começa com Santo? <br>`)
+        if ('santo' == pnome[0]){
+            document.write(`Sim!`)
+        } else {
+            document.write("Não!")
+        }
+
+    </script>
+</body>
+</html>

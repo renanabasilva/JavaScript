@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex032</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P> # Ler o ano e dizer se é ou não ano bissexto<br>
+        # Usando a data atual com biblioteca datetime<br>
+        # Regras ano bissexto:<br>
+        # 1. De de 4 em 4 anos é ano bissexto.<br>
+        # 2. De 100 em 100 anos não é ano bissexto.<br>
+        # 3. De 400 em 400 anos é ano bissexto.<br></p>
+    <script>        
+        let ano = Number.parseInt(window.prompt('Qual ano você quer saber se é bissexto? Coloque o "0" para analisar o ano atual'))
+        let date = new Date()
+        if (ano == 0){
+            ano = date.getFullYear()
+        }
+        
+        if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0){
+            document.write(`O ${ano} é bissexto.`)
+        } else {
+            document.write(`O ano ${ano} não é bissexto.`)
+        }
+    </script>
+</body>
+</html>

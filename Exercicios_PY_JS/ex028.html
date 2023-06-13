@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex028</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Jogo tentar adivinhar o número que o computador escolheu</p>
+    <script>        
+        let array = [0, 1, 2, 3, 4, 5]
+        let numpc = choice(array)
+        window.alert("Vou pensar em um número de 0 à 5. Tente adivinhar...")
+        // teste de valor
+        while (true){
+            var num = Number.parseFloat(window.prompt('Em qual número eu pensei?'))
+            if (array.includes(num) == true) {
+                break
+            } else {
+                window.alert("Valor inválido! Insira um valor entre 0 e 5")
+            }
+        }
+
+        // escolher valor aleatório
+        function choice(array) {
+            let index = Math.floor(array.length * Math.random())
+            return array[index]
+        }
+
+        if (num == numpc){
+            document.write(`Parabéns, você acertou! Eu escolhi o número ${numpc}!<br><br>`)
+        } else {
+            document.write(`Que pena, você errou... =( Eu escolhi o número ${numpc}...<br><br>`)
+        }
+
+        document.write("Fim de jogo! :)")
+    </script>
+</body>
+</html>

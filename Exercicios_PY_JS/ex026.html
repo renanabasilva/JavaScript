@@ -14,9 +14,30 @@
     </style>
 </head>
 <body>
-    <P># Verificar se possuí "Silva" no nome</p>
+    <P>## Dissecar uma frase:<br>
+        #1 Quantas vezes aparece a letra "A"<br>
+        #2 Em que posição ela aparece a primeira vez<br>
+        #3 Em que posição ela aparece pela última vez</p>
     <script>
+        let frase = window.prompt("Digite uma frase:")
+        frase = frase.toLowerCase()
+        let cont = 0
+        let prim = frase.search("a")
+        let ulti = frase.lastIndexOf("a")
+        for (let c=0; c<=(frase.length); c++){
+            if (frase[c] == 'a'){
+                cont++
+            }
+        }
 
+        if (prim == -1){
+            prim = 0
+        }
+        
+        document.write(frase)
+        document.write(`A letra "A" aparece ${cont} vezes na frase.<br>`)
+        document.write(`A letra "A" é encontrada pela primeira vez na posição ${prim}.<br>`)
+        document.write(`A letra "A" aparece pela última vez na posição${ulti}`)
     </script>
 </body>
 </html>

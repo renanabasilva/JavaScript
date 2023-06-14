@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex035</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Lê 3 comprimentos e diz se é possível formar um triângulo<br>
+        # Para formar um triângulo, a soma de duas arestas tem de ser superior a terceira.<br></p>
+    <script>        
+        let d1 = Number.parseFloat(window.prompt("Digite o 1° comprimento"))
+        let d2 = Number.parseFloat(window.prompt("Digite o 2° comprimento"))
+        let d3 = Number.parseFloat(window.prompt("Digite o 3° comprimento"))
+        
+        if ((d1 + d2) > d3 && (d1 + d3) > d2 && (d2 + d3) > d1){
+            document.write(`É possível formar um triângulo.`)
+        } else {
+            document.write(`Não é possível formar um triângulo com essas medidas.`)
+        }
+    </script>
+</body>
+</html>

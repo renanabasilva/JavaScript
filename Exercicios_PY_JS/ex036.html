@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex036</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Empréstimo bancário. Lê o valor da casa, o salário e tempo de financiamento.<br>
+        # Caso exceda 30% do salário, o empréstimo é negado.<br></p>
+    <script>        
+        let valor = Number.parseFloat(window.prompt("Qual o valor da casa?"))
+        let salar = Number.parseFloat(window.prompt("Qual o salário do comprador?"))
+        let tempo = Number.parseInt(window.prompt("Em quantos anos vai ser pago?"))
+        let prest = valor/tempo/12
+
+        if (prest < salar * 0.3) {
+            document.write(`O empréstimo foi APROVADO!<br>`)
+            document.write(`Sua parcela mensal será de R$${prest.toFixed(2)}`)
+        } else {
+            document.write(`Infelizmente o empréstimo foi NEGADO!<br>`)
+            document.write(`Motivo: Comprometimento de mais de 30% da renda (R$${prest.toFixed(2)})`)
+        }
+    </script>
+</body>
+</html>

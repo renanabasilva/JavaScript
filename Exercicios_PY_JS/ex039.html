@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex039</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Ler o ano de nasc e informar se: Se ainda vai, se é tempo, se já passou o tempo de se alistar.<br>
+        # Mostrar também o tempo que falta ou que passou do prazo.<br></p>
+    <script>        
+        let anonasc = Number.parseInt(window.prompt("Digite o ano em que você nasceu: "))
+        let date = new Date()
+        let ano = date.getFullYear()
+        let idade = ano - anonasc
+
+        document.write(`Sua idade é ${idade} anos.`)
+
+        if (idade < 18){
+            document.write(`Ainda não chegou sua hora de se alistar. Falta ${18-idade} anos.`)
+        } else if (idade == 18){
+            document.write(`Está na hora de se alistar.`)
+        } else if (idade > 18){
+            document.write(`Seu alistamento foi em ${ano-(idade-18)} Já passou ${idade-18} anos da sua data de alistamento.`)
+        }
+    </script>
+</body>
+</html>

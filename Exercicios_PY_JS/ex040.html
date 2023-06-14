@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex040</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Ler duas notas de um aluno e calcular média dizendo se está aprovado ou não<br></p>
+    <script>        
+        let nota1 = Number.parseFloat(window.prompt("Digite a primeira nota: "))
+        let nota2 = Number.parseFloat(window.prompt("Digite a segunda nota: "))
+        let media = (nota1 + nota2)/2
+
+        if (media >= 7){
+            document.write(`Sua média foi de: ${media.toFixed(2)} APROVADO`)
+        } else if (7 > media && media >= 5){
+            document.write(`Sua média foi de: ${media.toFixed(2)} RECUPERAÇÃO`)
+        } else if (media < 5){
+            document.write(`Sua média foi de: ${media.toFixed(2)} REPROVADO`)
+        }
+    </script>
+</body>
+</html>

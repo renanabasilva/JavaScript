@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex037</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Ler um número inteiro e o usuário escolhe a base de conversão: binário, octal e hexadecimal<br>
+        # Pode ser feito com:<br>
+        # bin(); oct() e hex() ou {:b}; {:o}; {:x} ( hexa c/ letra min.) e {:X} (hexa c/ letra maiusc.)<br></p>
+    <script>        
+        let num = Number.parseInt(window.prompt("Digite um número inteiro qualquer:"))
+        let opcao = Number.parseInt(window.prompt("Para qual base numérica você gostaria de converter? \n[1] - Binário \n[2] - Octadecimal \n[3] - Hexadecimal"))
+
+        if (opcao == 1){
+            document.write(`Você escolheu binário.<br>Seu número em hexadecimal fica: ${num.toString(2)}`)
+        } else if (opcao == 2){
+            document.write(`Você escolheu octal.<br>Seu número em octal fica: ${num.toString(8)}`)
+        } else if (opcao == 3){
+            document.write(`Você escolheu hexadecimal.<br>Seu número em hexadecimal fica: ${num.toString(16)}`)
+        } else {
+            document.write(`Opção inválida!`)
+        }
+    </script>
+</body>
+</html>

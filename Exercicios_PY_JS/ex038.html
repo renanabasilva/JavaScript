@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex038</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Lê dois números e os compara, mostrando qual é maior, menor ou iguais<br></p>
+    <script>        
+        let num1 = Number.parseInt(window.prompt("Digite o primeiro número:"))
+        let num2 = Number.parseInt(window.prompt("Digite o segundo número:"))
+
+        if (num1 == num2){
+            document.write(`Não existe valor maior. Os números ${num1} e ${num2} são iguais.`)
+        } else if (num1 > num2){
+            document.write(`O número ${num1} é maior que o número ${num2}.`)
+        } else if (num2 > num1){
+            document.write(`O número ${num2} é maior que o número ${num1}.`)
+        }
+    </script>
+</body>
+</html>

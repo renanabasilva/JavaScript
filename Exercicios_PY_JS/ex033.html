@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex033</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P> # Compara 3 numeros e mostra o maior e menor</p>
+    <script>        
+        let n1 = Number.parseFloat(window.prompt("Digite o 1° número: "))
+        let n2 = Number.parseFloat(window.prompt("Digite o 2° número: "))
+        let n3 = Number.parseFloat(window.prompt("Digite o 3° número: "))
+        let menor = n1
+        let maior = n1
+
+        if (n2 < n1 && n2 < n3){
+            menor = n2
+        }
+
+        if (n3 < n1 && n3 < n2){
+            menor = n3
+        }
+
+        if (n2 > n1 && n2 > n3){
+            maior = n2
+        }
+
+        if (n3 > n1 && n3 > n2){
+            maior = n3
+        }
+
+        document.write(`O menor valor é ${menor}, e o maior é ${maior}`)
+    </script>
+</body>
+</html>

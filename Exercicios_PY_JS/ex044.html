@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex044</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Calcular preço produto:<br>
+        # - A vista: 10% desc; - A vista cartão: 5% desc; - 2x cartão: preço normal; - 3x ou mais: 20% de juros.<br></p>
+    <script>        
+        let preco = Number.parseFloat(window.prompt("Qual o valor do produto?"))
+        let pgto = Number.parseInt(window.prompt("Escolha a forma de pagamento: \n#1 - À vista dinheiro/cheque.\n#2 - À vista no cartão.\n#3 - 2x no cartão.\n#4 - 3x ou mais no cartão."))
+
+        if (pgto == 1){
+            var pf = preco * 0.9
+            document.write(`Opção escolhida: #${pgto}<br>`)
+        } else if (pgto == 2){
+            var pf = preco * 0.95
+            document.write(`Opção escolhida: #${pgto}<br>`)
+        } else if (pgto == 3){
+            var pf = preco
+            document.write(`Opção escolhida: #${pgto}<br>`)
+        } else if (pgto == 4){
+            let qparc = Number.parseInt(window.prompt("Quantas parcelas?"))
+            var pf = preco * 1.2
+            let vparc = pf/qparc
+            document.write(`Opção escolhida: #${pgto}<br>`)
+            document.write(`Sua compra será parcelada em ${qparc}x de R$${vparc.toFixed(2)} com juros.<br>`)
+        } else {
+            window.alert("Opção inválida!")
+        }
+
+        document.write(`O valor final ficou de R$${preco} por R$${pf.toFixed(2)}`)
+    </script>
+</body>
+</html>

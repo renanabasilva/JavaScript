@@ -1,7 +1,3 @@
-console.log("test")
-let num = 7
-let array = [0, 1, 2, 3, 4, 5]
-if (array.includes(num) == false){
-    console.log("nao saiu")
+for (var c = 0; c < 51; c += 2){
+    console.log(`${c} `)
 }
-console.log("saiu")

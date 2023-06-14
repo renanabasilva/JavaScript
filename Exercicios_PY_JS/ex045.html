@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex045</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <P># Jokenpô<br></p>
+    <script>     
+        function choice(array) {
+            let index = Math.floor(array.length * Math.random())
+            return array[index]
+        }
+
+        let array = [1, 2, 3]
+        let pc = choice(array)
+        let player = Number.parseInt(window.prompt("Jo ken Pô... \nQual vai ser sua jogada? \n#1 - Pedra\n#2 - Papel\n#3 - Papel"))
+
+        // Empate
+        if (player == pc){
+            document.write(`Empate!`)
+        } else if (player == 1 && pc == 2){         // Condições de vitória
+            document.write(`Computador venceu!`)
+        } else if (player == 1 && pc == 3){
+            document.write(`Jogador venceu!`)
+        } else if (player == 2 && pc == 1){
+            document.write(`Jogador venceu!`)
+        } else if (player == 2 && pc == 3){
+            document.write(`Computador venceu!`)
+        } else if (player == 3 && pc == 1){
+            document.write(`Computador venceu!`)
+        } else if (player == 3 && pc == 2){
+            document.write(`Jogador venceu!`)
+        }       
+    </script>
+</body>
+</html>

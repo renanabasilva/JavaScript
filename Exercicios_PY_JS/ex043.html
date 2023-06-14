@@ -18,7 +18,21 @@
     <script>        
         let peso = Number.parseFloat(window.prompt("Digite seu peso: (Kg)"))
         let altura = Number.parseFloat(window.prompt("Digite sua altura: (m)"))
-        let imc = peso / 
+        let imc = peso / Math.pow(altura, 2)
+        
+        document.write(`Seu IMC é de: ${imc.toFixed(2)}<br>`)
+
+        if (imc < 18.5){
+            document.write(`Abaixo do peso.`)
+        } else if (18.5 <= imc && imc < 25){
+            document.write(`Peso ideal.`)
+        } else if (25 <= imc && imc < 30){
+            document.write(`Sobrepeso.`)
+        } else if (30 <= imc && imc < 40){
+            document.write(`Obesidade.`)
+        } else if (imc >= 40){
+            document.write(`Obesidade mórbida.`)
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex053</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler a frase e dizer se ela é um palíndromo desconsiderando os espaços<br></p>
+    <script>   
+        let cont = 0
+        let frase = window.prompt("Digite uma frase: ")
+        frase = frase.toLowerCase().replace(/ /g, "").trim()
+        frasei = reverseString(frase)
+        // document.write(frasei)
+        for (var c = 0; c <= frase.length; c++){
+            if ((frase.charAt(frase.length-c)) == (frasei.charAt(frasei.length-c))){
+                cont++
+            }
+        }
+
+        document.write(`A frase ${frase} invertida fica: ${frasei}<br>`)
+
+        if (cont == frase.length +1){
+            document.write(`A frase é um palíndromo!`)
+        } else {
+            document.write("A frase não é um palíndromo.")
+        }
+
+        function reverseString(string){
+            var newString = ""
+            for (var i = string.length - 1; i >= 0; i--){
+                newString += string[i]
+            }
+            return newString
+        }
+
+        // function verPalindromo(string){
+        //     for (var c = 0; c <= frase.length; c++){
+        //         if ((frase.charAt(frase.length-c)) == (frasei.charAt(frasei.length-c))){
+        //             document.write(`${(frase.charAt(frase.length-c))} --- ${(frasei.charAt(frasei.length-c))}<br>`)
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+</html>

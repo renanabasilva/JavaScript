@@ -14,48 +14,9 @@
     </style>
 </head>
 <body>
-    <p># Melhorar desafio 028 : # Jogo tentar adivinhar o número que o computador escolheu<br>
-        # O pc vai pensar de 0 a 10.<br>
-        # O jogador tenta adivinhar até acertar.<br>
-        # Mostrar ao final quantidade total de palpites.<br></p>
+    <p># Ler dois valores e mostrar menu de escolha: 1.Somar, 2.multiplicar, 3.Maior Valor, 4.Digitar novos números, 5.Sair.<br></p>
     <script>   
-        function choice(array) {
-            let index = Math.floor(array.length * Math.random())
-            return array[index]
-        }
 
-        function isNumeric(n) {
-            return !isNaN(parseFloat(n)) && isFinite(n);
-        }
-
-        let lista = []
-        for (let c=0; c<11;c++){
-            lista.push(c)
-        }
-        let numpc = choice(lista)
-        let numps = '11'
-        let cont = 0
-        window.alert("Vou pensar em um número de 0 à 10. Tente adivinhar...")
-        
-        while (numpc != numps){
-            numps = Number.parseInt(window.prompt("Em qual número eu pensei?"))
-            cont++
-            
-            if (isNumeric(numps)){
-                if (numpc != numps && numps >= 0 && numps < 11){
-                    window.alert(`Erroooou! Não foi o número ${numps}, tenta de novo!`)
-                }
-                if (!lista.includes(numps)){
-                    window.alert(`Essa jogada não valeu! Tenta de novo...`)
-                }
-                
-            } else {
-                window.alert("Hey! É pra tentar adivinhar o número... Tenta de novo!")
-            }            
-        }
-
-        document.write(`Parabéns, você acertou! Eu escolhi o número ${numpc}<br>`)
-        document.write(`Levou ${cont} chute(s) até você adivinhar.<br> FIM DE JOGO!`)
     </script>
 </body>
 </html>

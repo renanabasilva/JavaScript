@@ -19,7 +19,33 @@
         # 2 - Nome do homem mais velho<br>
         # 3 - Quantas mulheres tem menos de 20 anos<br></p>
     <script>   
-        
+        sIdade = 0
+        velho = 0
+        nova = 0
+        hVelho = ''
+
+        for (let c = 1; c < 5; c++){
+            var nome = window.prompt(`Digite o nome da ${c}° pessoa:`)
+            var idade = Number.parseInt(window.prompt(`Digite a idade de ${nome}: `))
+            var sexo = window.prompt(`${nome} é homem ou mulher? [H/M]`)
+            sexo = sexo.toLowerCase()
+            var sIdade = sIdade += idade
+            if (sexo == "h"){
+                if (idade > velho){
+                    hVelho = nome
+                    velho = idade
+                }
+            }
+            if (sexo == "m"){
+                if (idade > 20){
+                    nova++
+                }
+            }
+        }
+
+        let media = sIdade/4
+
+        document.write(`Dessas pessoas, a media de idades é ${media} anos.<br>O nome do homem mais velho é ${hVelho}, com ${velho} anos.<br>Existem ${nova} mulher(es) com menos de 20 anos.`)
     </script>
 </body>
 </html>

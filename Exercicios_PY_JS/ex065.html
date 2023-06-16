@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex064</title>
+    <title>Ex065</title>
     <style>
         body {
             background-color: rgb(44, 44, 44);
@@ -22,8 +22,21 @@
             num = Number.parseInt(window.prompt("Digite um número:"))
             sair = window.prompt("Quer continuar? [S/N]")
             sair = sair.toUpperCase()
-            if (cont == 0){}
+            if (cont == 0){
+                var menor = num                
+            }
+            totnum += num
+            cont++
+            if (num < menor){
+                menor = num
+            }
+            if (num > maior){
+                maior = num
+            }
         }
+        let media = totnum / cont
+
+        document.write(`A média dos números é ${media};<br>A soma dos números é ${totnum};<br>O maior número é ${maior};<br>O menor número é ${menor}.`)
     </script>
 </body>
 </html>

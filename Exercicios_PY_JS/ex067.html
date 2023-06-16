@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex067</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Mostrar a tabuada do núm solicitado. Interromper com valor negativo.<br></p>
+    <script>   
+        // let lista = Array(11).fill(1).map((x, y) => x + y)
+        // while(true){
+            var num = Number.parseInt(window.prompt("Digite o número referente a tabuada desejada [Negativo para encerrar]:"))
+            if (num >= 0){
+                for (c=1; c > 12; c++){
+                    document.write(`${num.toFixed(2)} x ${c.toFixed(2)}} = ${num * c.toFixed(2)}`)
+                }
+            } 
+
+        // }
+    </script>
+</body>
+</html>

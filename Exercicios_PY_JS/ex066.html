@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex066</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler vários números e parar com 999. 1-Mostrar qtde n° digitados. 2-Mostrar a soma ** Desconsiderar o flag.<br></p>
+    <script>   
+        let quant = soma = 0
+
+        while(true){
+            var num = Number.parseInt(window.prompt(`Digite o ${quant+1}° número ou '999' para finalizar:`))
+
+            if (num == 999){
+                window.alert("Encerrando...")
+                break
+            }
+            quant++
+            soma += num
+        }
+
+        document.write(`A quantidade de números digitados foi de ${quant} e a soma total foi de ${soma}.`)
+    </script>
+</body>
+</html>

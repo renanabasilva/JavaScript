@@ -16,7 +16,33 @@
 <body>
     <p># Ler dois valores e mostrar menu de escolha: 1.Somar, 2.multiplicar, 3.Maior Valor, 4.Digitar novos números, 5.Sair.<br></p>
     <script>   
-
+        let lista = [0, 1, 2, 3]
+        var opcao = 0
+        while (opcao != 5){
+            opcao = 0
+            var num1 = Number.parseInt(window.prompt("Digite um número: "))
+            var num2 = Number.parseInt(window.prompt("Digite outro número: "))
+            while (lista.includes(opcao)) {
+                opcao = Number.parseInt(window.prompt("Digite sua opção:\n#1 - Somar\n#2 - Multiplicar\n#3 - Maior número\n#4 - Escolher outros números\n#5 - Sair"))
+                if (opcao == 1){
+                    let soma = num1 + num2
+                    window.alert(`A soma dos números escolhidos é ${soma}.`)
+                } else if (opcao == 2){
+                    let multi = num1 * num2
+                    window.alert(`A multiplicação dos números escolhidos é ${multi}.`)
+                } else if (opcao == 3){
+                    let maior = Math.max(num1, num2)
+                    window.alert(`O maior número entre ${num1} e ${num2} é ${maior}.`)
+                }
+            }
+            if(opcao == 4){
+                window.alert("REINICIANDO...")
+            } else if (!lista.includes(opcao) && opcao != 5){
+                window.alert("Opção inválida. Reiniciando...")
+            }
+        }
+        window.alert("Encerrando...")
+        document.write("Fim")
     </script>
 </body>
 </html>

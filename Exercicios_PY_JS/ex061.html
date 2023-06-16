@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex061</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Refazer Ex051 utilizando while.<br>
+        # Ler o primeiro termo e a razão de uma PA (Progressão Aritmética), e mostrar ao final os 10 primeiros termos da PA<br></p>
+    <script>   
+        let a1 = Number.parseInt(window.prompt("Digite o primeiro termo da PA:"))
+        let r = Number.parseInt(window.prompt("Digite a razão da PA:"))
+        let c = 0
+        while (c < 10){
+            document.write(`${a1} `)
+            a1 += r
+            c++
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex060</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler um número e mostrar o seu fatorial. Ex: 5! = 5x4x3x2x1 = 120<br></p>
+    <script>   
+        let cont = 1
+        let num = Number.parseInt(window.prompt("Digite um número para saber seu fatorial:"))
+        let fat = num
+        while (cont != num){
+            fat *= cont
+            cont += 1
+        }
+        document.write(`${num}! é igual a = ${fat}`)
+    </script>
+</body>
+</html>

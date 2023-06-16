@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex063</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler um número N e mostrar os N primeiros elementos de uma Sequência de Fibonacci. Ex.: 0 → 1 → 1 → 2 → 3 → 5 → 8<br></p>
+    <script>   
+        let elem = Number.parseInt(window.prompt("Digite um número para saber seu termo na sequência de Fibonacci:"))
+        let n1 = n3 = num = 0
+        let n2 = 1
+        while(num<elem){
+            document.write(`${n1} `)
+            n3 = n1 + n2
+            n1 = n2 
+            n2 = n3
+            num++
+        }
+    </script>
+</body>
+</html>

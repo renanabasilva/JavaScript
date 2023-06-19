@@ -16,16 +16,19 @@
 <body>
     <p># Mostrar a tabuada do núm solicitado. Interromper com valor negativo.<br></p>
     <script>   
-        // let lista = Array(11).fill(1).map((x, y) => x + y)
-        // while(true){
+        let lista = Array(10).fill(1).map((x, y) => x + y)
+        var totc = 0
+        while(true){
             var num = Number.parseInt(window.prompt("Digite o número referente a tabuada desejada [Negativo para encerrar]:"))
             if (num >= 0){
-                for (c=1; c > 12; c++){
-                    document.write(`${num.toFixed(2)} x ${c.toFixed(2)}} = ${num * c.toFixed(2)}`)
+                for (var c=1; c<11; c++){
+                    window.alert(`${num} x ${c} = ${num*c}`)
                 }
-            } 
-
-        // }
+            } else {
+                window.alert("Encerrando...")
+                break
+            }
+        }
     </script>
 </body>
 </html>

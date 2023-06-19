@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex069</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler idade e sexo de várias pessoas. P/ cada usuario perguntar se quer continuar e mostrar:<br>
+        # 1. Qtde de pessoas maiores de 18 anos<br>
+        # 2. Qtde de homens cadastrados<br>
+        # 3. Qtde de mulheres menores de 20 anos<br></p>
+    <script>  
+        let maior = totpes = homem = mmenor = 0        
+        while (true){
+
+            // Validação de idade
+            var idade = ' '
+            
+            while (true){
+                var idade = Number.parseInt(window.prompt("Digite a idade:"))
+                if (!Number.isNaN(idade)){
+                    break
+                }else {
+                    window.alert("Valor inválido, tente novamente.")
+                }
+            } 
+
+            // Validação de sexo
+            var sexo = ' '
+            while (sexo != "M" && sexo != "F"){
+                sexo = window.prompt("Digite o sexo [M/F]:")
+                sexo = sexo.toUpperCase()
+            }
+
+            // cod
+            totpes++
+            if (idade >= 18){
+                maior++
+            }
+            if (sexo == "M"){
+                homem++
+            }
+            if (sexo == "F" && idade < 20){
+                mmenor++
+            }
+
+            do {
+                var cont = window.prompt("Deseja continuar? [S/N]")
+                cont = cont.toUpperCase()
+            } while (cont != "S" && cont != "N")
+
+            if (cont == "N"){
+                break
+            }
+        }
+        document.write(`Ao todo foram cadastradas ${totpes} pessoas.<br>Existem ${maior} pessoas com mais de 18 anos.<br>Existem ${homem} homens cadastrados.<br>Existem ${mmenor} mulheres menores de 20 anos cadastradas.`)
+    </script>
+</body>
+</html>

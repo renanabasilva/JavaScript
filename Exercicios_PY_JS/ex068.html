@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex068</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Jogo Par ou Impar. Interromper quando o jogador perder e mostrar o total de vitórias consecutivas.<br></p>
+    <script>  
+        function choice(array) {
+            let index = Math.floor(array.length * Math.random())
+            return array[index]
+        } 
+
+        let lista = Array(10).fill(1).map((x, y) => x + y)
+
+        let rod = 1
+        let win = 0
+        while(true){
+            var computador = choice(lista)
+            var jogador = ' '
+            var poi = ' '
+            while (true){
+                jogador = Number.parseInt(window.prompt(`${rod}° rodada. Escolha o seu número: `))
+                if (!Number.isNaN(jogador)){
+                    break
+                }else {
+                    window.alert("Valor inválido, tente novamente.")
+                }
+            } 
+            while (poi != "P" && poi != "I"){
+                var poi = window.prompt("Você quer par ou impar? [P/I]")
+                poi = poi.toUpperCase()
+            }
+            var total = computador + jogador
+            if (total % 2 == 0){
+                window.alert(`Você jogou ${jogador} e o computador ${computador}. Total de ${total}, deu PAR!`)
+                if (poi == "P"){
+                    window.alert(`Você ganhou! Vamos jogar novamente.`)
+                    win++
+                    rod++
+                } else if (poi == "I"){
+                    window.alert(`Você perdeu...`)
+                    break
+                }
+            } else {
+                window.alert(`Você jogou ${jogador} e o computador ${computador}. Total de ${total}, deu IMPAR!`)
+                if (poi == "I"){
+                    window.alert(`Você ganhou! Vamos jogar novamente.`)
+                    win++
+                    rod++
+                } else if (poi == "P"){
+                    window.alert(`Você perdeu...`)
+                    break
+                }
+            }
+        }
+        document.write(`GAME OVER  <br>Você venceu ${win} vezes.`)
+    </script>
+</body>
+</html>

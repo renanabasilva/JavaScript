@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex070</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler nome e preço de produtos. Perguntar se vai continuar e mostrar no final:<br>
+        # 1. Total gasto na compra<br>
+        # 2. Qtde produtos que custaram mais de R$1000<br>
+        # 3. O nome do produto mais barato<br></p>
+    <script>  
+        var mmil = total = mpreco = rod = 0
+        barato = ''
+        do {
+            var produto = window.prompt("Nome do produto:")
+            var preco = Number.parseFloat(window.prompt("Preço do produto: R$"))
+            total += preco
+            if (preco >= 1000){
+                mmil++
+            }
+            rod++
+            if (rod == 1 || preco < mpreco){
+                mpreco = preco
+                barato = produto
+            }
+            do {
+                var cont = window.prompt("Deseja continuar? [S/N]")
+                cont = cont.toUpperCase()
+            } while ( cont != "S" && cont != "N")
+        } while (cont == "S")
+
+        document.write(`O total gasto na compra foi de ${total.toFixed(2)} com ${rod} produtos.<br>${mmil} produto(s) custaram mais de R$ 1000,00<br>O produto mais barato foi ${barato}, custando R$${mpreco.toFixed(2)}<br>`)
+    </script>
+</body>
+</html>

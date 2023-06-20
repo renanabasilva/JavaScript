@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex072</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Criar uma Tupla de 0 até 20 (escrito por extenso). Solicitar input de um número e mostrar ele escrito.<br></p>
+    <script>  
+        const numeros = ['zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte']
+        let lista = Array(21).fill(0).map((x, y) => x + y)
+        do {
+            let num = Number.parseInt(window.prompt("Digite um número entre 0 e 20:"))
+            while (!lista.includes(num)){
+                num = Number.parseInt(window.prompt("Tente novamente. Digite um número entre 0 e 20:"))
+            }
+            window.alert(`Você digitou o número ${numeros[num]}`)
+            cont = window.prompt("Deseja continuar? [S/N]")
+            cont = cont.toUpperCase()
+        } while (cont != "N")
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex073</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Criar tabela com os 20 primeiros colocados do campeonato brasileiro e mostrar:<br>
+        # 1. Os primeiros 5 colocados.<br>
+        # 2. Os últimos 4 colocados.<br>
+        # 3. Lista com os times em ordem alfabética.<br>
+        # 4. Em que posição na tabela está o time da chapecoense.<br></p>
+    <script>  
+        const times = ['Corintians', 'Palmeiras', 'Santos', 'Grêmio', 'Cruzeiro', 'Flamengo', 'Vasco da Gama', 'Chapecoense', 'Atléthico-MG', 'Botafogo', 'Atheltico-PR', 'Bahia', 'São Paulo', 'Fluminense', 'Sport Recife', 'EC Vitória', 'Coritiba', 'Avaí', 'Ponte Preta', 'Atlético-GO']
+        const ordem = times.slice().sort()  // colocar em ordem alfabética, se não utilizar o "slice", o array original é alterado. (Slice faz uma cópia superficial do array)
+        // const ordem = [...times].sort()  // Faz a mesma coisa que acima, mas utilizando sintaxe spread
+
+        document.write(`Lista de times do Brasileirão: ${times}<br><br>`)
+
+        document.write(`Os 5 primeiros colocados são: ${times.slice(0, 5)}<br><br>`)
+
+        // document.write(`Os 4 últimos colocados são: ${times.slice((times.length)-4, (times.length))}<br><br>`)
+        document.write(`Os 4 últimos colocados são: ${times.slice(-4)}<br><br>`)
+        
+        // document.write(`Os times em ordem alfabética: ${ordem}<br><br>`)
+        document.write(`Os times em ordem alfabética: ${times.slice().sort()}<br><br>`)
+        
+        // document.write(`O chapecoense está na ${times.findIndex(time => time === "Chapecoense")+1}° posição<br><br>`)
+        document.write(`O chapecoense está na ${times.indexOf("Chapecoense")+1}° posição<br><br>`)
+        
+
+        // let ranks = [1, 5, 7, 8, 10, 7];
+        // let index = ranks.findIndex(rank => rank === 7);
+        // document.write(index);
+    </script>
+</body>
+</html>

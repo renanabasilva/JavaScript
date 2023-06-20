@@ -17,7 +17,33 @@
     <p># Simular o funcionamento de um caixa eletrônico. (valor inteiro) informar qtas cédulas de cada valor serão entregues.<br>
         # cédulas de 50, 20, 10 e 1 real<br></p>
     <script>  
+        let saque = Number.parseInt(window.prompt("Qual valor deseja sacar? R$"))
+        let total = saque
+        ced = 50
+        totced = 0
 
+        while (true){
+            if (total >= ced){
+                total -= ced
+                totced++
+            } else {
+                if (totced > 0){
+                    document.write(`Total de cédulas de R$${ced} foi de ${totced}.<br>`)
+                }
+                if (ced == 50){
+                    ced = 20
+                    totced = 0
+                } else if (ced == 20){
+                    ced = 10
+                    totced = 0
+                } else if (ced == 10){
+                    ced = 1
+                    totced = 0
+                } else if (total == 0){
+                    break
+                }
+            }
+        }
     </script>
 </body>
 </html>

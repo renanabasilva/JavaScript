@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex075</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler 4 valores e guardar numa tupla.<br>
+        # 1. Quantas vezes apareceu o 9.<br>
+        # 2. Em que posição foi digitado o primeiro valor 3.<br>
+        # 3. Quais foram os números pares.<br></p>
+    <script>  
+        const numeros = [
+            Number.parseInt(window.prompt("Digite o 1° número: ")), 
+            Number.parseInt(window.prompt("Digite o 2° número: ")), 
+            Number.parseInt(window.prompt("Digite o 3° número: ")), 
+            Number.parseInt(window.prompt("Digite o 4° número: ")), 
+            Number.parseInt(window.prompt("Digite o 5° número: "))
+        ]
+
+        document.write(`Os números digitados foram ${numeros}`)
+        document.write(`O número 9 apareceu   vezes.`)
+        
+    </script>
+</body>
+</html>

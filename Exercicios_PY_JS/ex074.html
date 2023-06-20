@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex074</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Criar 5 números aleatórios e colocar em uma Tupla. Listar os números gerados e indicar o maior e menor valor.<br></p>
+    <script>  
+        function choice(array) {
+            let index = Math.floor(array.length * Math.random())
+            return array[index]
+        }
+
+        let array = Array(10).fill(1).map((x, y) => x + y)
+
+        const numeros = [choice(array), choice(array), choice(array), choice(array), choice(array)]
+
+        document.write("Os números aleatórios foram: ")
+        for (let pos in numeros){
+            document.write(`${numeros[pos]} `)
+        }
+        document.write(`<br>O maior número foi ${Math.max(...numeros)}`)
+        document.write(`<br>O menor número foi ${Math.min(...numeros)}`)
+    </script>
+</body>
+</html>

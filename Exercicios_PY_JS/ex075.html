@@ -27,9 +27,21 @@
             Number.parseInt(window.prompt("Digite o 5° número: "))
         ]
 
-        document.write(`Os números digitados foram ${numeros}`)
-        document.write(`O número 9 apareceu   vezes.`)
-        
+        document.write(`Os números digitados foram ${numeros}<br><br>`)
+
+        document.write(`O número 9 apareceu ${[...numeros].filter(x => x===9).length} vezes.<br><br>`)
+
+        if (numeros.includes(3)){
+            document.write(`O número 3 apareceu primeiro na ${numeros.indexOf(3)+1}° posição<br><br>`)
+        } else {
+            document.write(`O número 3 não apareceu em nenhuma posição.<br><br>`)
+        }
+        document.write(`Os números pares digitados foram: `)
+        for (let pos in numeros){
+            if (numeros[pos] % 2 == 0){
+                document.write(`${numeros[pos]} `)
+            }
+        }
     </script>
 </body>
 </html>

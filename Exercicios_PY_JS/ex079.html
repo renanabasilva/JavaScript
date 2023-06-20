@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex079</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Digitar vários valores em uma lista. Caso já exista o número na lista, não será adicionado. Exibir todos os valores<br>
+        # únicos em ordem crescente.<br>
+        # 'Quer continuar'<br></p>
+    <script>  
+        const numeros = []
+        do {
+            var num = Number.parseInt(window.prompt("Digite um valor: "))
+            if (!numeros.includes(num)){
+                numeros.push(num)
+                window.alert("Valor adicionado com sucesso!")
+            } else {
+                window.alert("Valor duplicado. Tente novamente...")
+            }
+            flag = window.prompt("Deseja continuar? [S/N]")
+            flag = flag.toUpperCase()
+        } while (flag != "N")
+
+        numeros.sort(function(a,b){return a-b})
+        document.write(`Você digitou os valores ${numeros}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex076</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Criar uma Tupla com nome dos produtos e seus preços em sequência. No final mostrar os dados em formato tabular.<br></p>
+    <script>  
+        const produtos = ['Lápis', 1.75, 'Borracha', 2, 'Caderno', 15.90, 'Estojo', 25, 'Transferidor', 4.20, 'Compasso', 9.99, 'Mochila', 120.32, 'Canetas', 22.30, 'Livros', 34.90]
+
+        for (let pos=0; pos < produtos.length; pos += 2){
+            document.write(`${produtos[pos]}  R$ ${produtos[Number.parseInt(pos)+1]}<br><br>`)
+        }
+    </script>
+</body>
+</html>

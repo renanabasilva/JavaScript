@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex077</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Criar uma tupla com várias palavras (sem acentuação) e mostrar para cada palavra quais são suas vogais.<br></p>
+    <script>  
+        const palavras = ['APRENDER', 'PROGRAMAR', 'LINGUAGEM', 'PYTHON', 'CURSO', 'GRATIS', 'ESTUDAR', 'PRATICAR', 'TRABALHAR', 'MERCADO', 'PROGRAMADOR', 'FUTURO']
+        const vogais = ['A', 'E', 'I', 'O', 'U']
+
+        for (let pos in palavras){            
+            document.write(`<br>Na palavra ${palavras[pos]} temos: `)
+            var palavra = palavras[pos]
+            // for (let letra=0; letra < palavra.length; letra++){
+            for (let letra in palavra){
+                if (vogais.includes(palavra[letra])){
+                    document.write(palavra[letra])
+                }
+            }
+        }
+    </script>
+</body>
+</html>

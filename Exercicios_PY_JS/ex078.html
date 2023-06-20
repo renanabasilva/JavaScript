@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex078</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler 5 valores e guardar em uma lista. Mostrar maior e menor valor e suas respectivas posições.<br>
+        # Se estiver em mais de uma posição, tem de mostrar todas posições em que se encontra<br></p>
+    <script>  
+        const numeros = []
+        // const array = Array(6).fill(1).map((x, y) => x + y)
+        for (let c=1; c < 6; c++){
+            numeros.push(Number.parseInt(window.prompt(`Digite um número para a posição ${c}: `)))
+        }
+        document.write(`A lista de números ${numeros}<br><br>`)
+        document.write(`O maior valor foi de ${Math.max(...numeros)} nas posições `)
+        for (c=0; c<numeros.length; c++){
+            if (numeros[c] === Math.max(...numeros)){
+                document.write(`${c}.. `)
+            }
+        }
+        document.write(`<br>O menor valor foi de ${Math.min(...numeros)} nas posições `)
+        for (c=0; c<numeros.length; c++){
+            if (numeros[c] === Math.min(...numeros)){
+                document.write(`${c}.. `)
+            }
+        }
+    </script>
+</body>
+</html>

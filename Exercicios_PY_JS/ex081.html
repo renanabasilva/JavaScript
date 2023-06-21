@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex081</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler vários números e colocar em uma lista e mostrar:<br>
+        # 1. Quantos números foram digitados.<br>
+        # 2. A lista de valores, ordenados de forma decrescente.<br>
+        # 3. Se o valor 5 foi digitado e está ou não na lista.<br></p>
+    <script>  
+        let numeros = []
+        do {
+            numeros.push(Number.parseInt(window.prompt("Digite um valor: ")))
+            cont = window.prompt("Quer continuar? [S/N]")
+            cont = cont.toUpperCase()
+        } while (cont != "N")
+        document.write(`Ao todo foram digitados ${numeros.length} valores.<br>`)
+        numeros.sort(function(a,b){return a-b})
+        document.write(`Os números em ordem crescente são ${numeros}<br>`)
+        numeros.sort(function(a,b){return b-a})
+        document.write(`Os números em ordem decrescente são ${numeros}<br>`)
+        if (numeros.includes(5)){
+            document.write(`O número 5 faz parte da lista.`)
+        } else {
+            document.write(`O número 5 não faz parte da lista.`)
+        }
+    </script>
+</body>
+</html>

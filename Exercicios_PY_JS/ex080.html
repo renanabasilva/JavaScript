@@ -16,13 +16,26 @@
 <body>
     <p># ler 5 valores colocando eles em ordem crescente conforme se é digitado.<br></p>
     <script>  
-        const numeros = []
+        let numeros = []
         for (let c=1; c<6; c++){
-            let num = Number.parseInt(window.prompt(`Digite o ${c}° valor: `))
+            var num = Number.parseInt(window.prompt(`Digite o ${c}° valor: `))
             if (c === 1 || num >= Math.max(...numeros)){
-                
+                numeros.push(num)
+                window.alert("Valor adicionado ao final da lista")
+            } else if (num <= Math.min(...numeros)){
+                numeros.unshift(num)
+                window.alert("Valor adicionado no inicio da lista")
+            } else {
+                for (let cont=0; cont < numeros.length; cont++){
+                    if (num < numeros[cont]){
+                        numeros.splice(cont, 0, num)
+                        window.alert(`Valor adicionado na ${cont}° posição da lista. Antes era o número ${numeros[cont+1]}`)
+                        break
+                    }
+                }
             }
         }
+        document.write(`Os valores digitados ordenados foram ${numeros}`)
     </script>
 </body>
 </html>

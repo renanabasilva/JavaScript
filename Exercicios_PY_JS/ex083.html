@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex083</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Usuario digitará uma expressão qualquer com parênteses. Analisar se os parênteses estão abertos e fechados<br>
+        # em ordem correta.<br></p>
+    <script>  
+        const aberto = []
+        const fechado = []
+        let exp = window.prompt("Digite sua expressão:")
+        for (let valor of exp){
+            if (valor == '('){
+                aberto.push(valor)
+            } else if (valor == ')'){
+                fechado.push(valor)
+            }
+        }
+        if (aberto.length == fechado.length){
+            document.write("Sua expressão está válida.")
+        } else {
+            document.write("Sua expressão está inválida.")
+        }
+    </script>
+</body>
+</html>

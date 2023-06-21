@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex082</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler vários números e criar mais duas listas, uma com valores pares e outra com impares. Mostrar as 3 listas ao final.<br></p>
+    <script>  
+        var numeros = []
+        var pares = []
+        var impares = []
+        do {
+            numeros.push(Number.parseInt(window.prompt("Digite um número: ")))
+            cont = window.prompt("Quer continuar? [S/N]")
+            cont = cont.toUpperCase()
+        } while (cont != "N")
+
+        for (let c of numeros){
+            if (c % 2 == 0){
+                pares.push(c)
+            } else if (c % 2 == 1){
+                impares.push(c)
+            }
+        }
+        document.write(`A lista completa é ${numeros}<br>`)
+        document.write(`A lista de pares é ${pares}<br>`)
+        document.write(`A lista de ímpares é ${impares}<br>`)
+    </script>
+</body>
+</html>

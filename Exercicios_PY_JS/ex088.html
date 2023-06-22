@@ -16,10 +16,31 @@
 <body>
     <p># Criar palpites da mega sena. Perguntar quantos jogos e sortear 6 numeros entre 1 e 60 para cada jogo.<br></p>
     <script>  
+        function choice(array) {
+            let index = Math.floor(array.length * Math.random())
+            return array[index]
+        }
+
+        const sena = Array(60).fill(1).map((x, y) => x + y)
         let jogo = []
         let totalj = []
         let jogadas = Number.parseInt(window.prompt("Quantos jogos você quer que eu sorteie?"))
-        for ()
+        for (let i=0; i < jogadas; i++){
+            for( let j=0; j < 6; j++){
+                while (true){
+                    var num = choice(sena)
+                    if (!jogo.includes(num)){
+                        break
+                    }
+                }
+                jogo.push(num)
+            }
+            jogo.sort(function(a,b){return a-b})
+            totalj.push(jogo)
+            jogo = []
+            document.write(`Jogo ${i+1}: ${totalj[i]}<br>`)
+        }
+        document.write("Boa sorte!")
     </script>
 </body>
 </html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex088b</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Mega sena, quantidade de jogos até ganhar.<br></p>
+    <script>  
+        function choice(array) {
+            let index = Math.floor(array.length * Math.random())
+            return array[index]
+        }
+        let jogo = []
+        let sena = []
+        const megasena = Array(60).fill(1).map((x, y) => x + y)
+
+        for (let i=0; i<6;i++){
+            while (true){
+                jogada = Number.parseInt(window.prompt(`Diga o ${i+1}° número do seu jogo: `))
+                if (!sena.includes(jogada) && jogada >= 1 && jogada <= 60){
+                    sena.push(jogada)
+                    break
+                } else {
+                    window.alert("Valor inválido! Tente novamente...")
+                }
+            }
+        }
+        sena.sort(function(a,b){return a-b})
+        document.write(`Esse é o seu jogo: [${sena}]<br>`)
+        let jogos = 0
+        while (true){
+            for (let j=0; j<6; j++){
+                while (true){
+                    var num = choice(megasena)
+                    if (!jogo.includes(num)){
+                        break
+                    }
+                }
+                jogo.push(num)
+            }
+            jogo.sort(function(a,b){return a-b})
+            jogos++
+            if (jogo.toString() === sena.toString()){
+                break
+            }
+            jogo = []
+        }
+        document.write("Você ganhou!!<br>")
+        document.write(`Seu jogo: ${sena}<br>`)
+        document.write(`O jogo sorteado: ${jogo}<br>`)
+        document.write(`Foram necessários ${jogos} para vencer.<br>`)
+    </script>
+</body>
+</html>

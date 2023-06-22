@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex087</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Aprimorar o desafio 86: 1. Somar os pares. 2. Somar 3° coluna. 3. Maior valor da 2° linha.<br></p>
+    <script>  
+        let matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+        let pares = col3 = mv2 = 0
+        for (let lin = 0; lin < 3; lin++){
+            for (let col = 0; col < 3; col++){
+                matriz[lin][col] = Number.parseInt(window.prompt(`Digite um valor para a posição [${lin+1}, ${col+1}]:`))
+            }
+        }
+        for (lin = 0; lin < 3; lin++){
+            for (col = 0; col < 3; col++){
+                document.write(`[ ${matriz[lin][col]} ] `)
+                if (matriz[lin][col] % 2 == 0){
+                    pares += matriz[lin][col]
+                }
+                if (col == 2){
+                    col3 += matriz[lin][col]
+                }
+                if (lin == 1){
+                    if (matriz[lin][col] > mv2)
+                    mv2 = matriz[lin][col]
+                }
+            }
+            document.write(`<br>`)
+        }
+        document.write(`A soma dos valores pares é ${pares}.<br>`)
+        document.write(`A soma dos valores da terceira coluna é ${col3}.<br>`)
+        document.write(`O maior valor da segunda linha é ${mv2}.<br>`)
+    </script>
+</body>
+</html>

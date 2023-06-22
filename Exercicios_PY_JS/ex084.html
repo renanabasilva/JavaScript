@@ -17,7 +17,29 @@
     <p># Ler nome e peso de várias pessoas em uma lista e mostrar: (Quer continuar)<br>
         # 1. Quantas pessoas cadastradas. 2. Lista com as mais pesadas. 3. Lista com as mais leves.<br></p>
     <script>  
-        
+        // const array = Array(6).fill(1).map((x, y) => x + y)
+        var dado = Array()
+        var pessoas = Array()
+        var pesados = Array()
+        var leves = Array()
+        do {
+            dado.push(window.prompt('Nome: '))
+            dado.push(Number.parseFloat(window.prompt('Peso: ')))
+            pessoas.push(dado)
+            dado = []
+            cont = window.prompt("Quer continuar? [S/N]")
+            cont = cont.toUpperCase()
+        } while (cont != "N")
+        for (let c of pessoas){
+            if (c[1] >= 100){
+                pesados.push(c[0])
+            } else if (c[1] <= 70){
+                leves.push(c[0])
+            }
+        }
+        document.write(`Ao todo foram cadastradas ${pessoas.length} pessoas.<br>`)
+        document.write(`As pessoas com mais de 100Kg foram ${pesados}<br>`)
+        document.write(`As pessoas com menos de 70Kg foram ${leves}<br>`)
     </script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex090</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler nome e média de um aluno e se está aprovado ou reprovado.<br></p>
+    <script>  
+        // var aluno = newObject()
+        var aluno = {}
+        // aluno.PrimeiroNome = window.prompt("Nome:")
+        aluno['nome'] = window.prompt("Nome:")
+        aluno['media'] = Number.parseFloat(window.prompt(`Média de ${aluno['nome']}:`))
+        if (aluno['media'] >= 7){
+            aluno['situacao'] = 'Aprovado'
+        } else if (aluno['media'] >= 5){
+            aluno['situacao'] = 'Recuperação'
+        } else {
+            aluno['situacao'] = 'Reprovado'
+        }
+        for (const [key, value] of Object.entries(aluno)){
+            window.document.write(`${key} - ${value} <br>`)
+        }
+    </script>
+</body>
+</html>

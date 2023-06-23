@@ -18,8 +18,20 @@
         # usuário mostre cada nota individualmente<br></p>
     <script>  
         let classe = []
-        while (true){
-            nome = 
+        do {
+            var nome = window.prompt("Nome:")
+            var nota1 = Number.parseFloat(window.prompt("Nota 1:"))
+            var nota2 = Number.parseFloat(window.prompt("Nota 2:"))
+            var media = ((nota1 + nota2)/2)
+            classe.push([nome, [nota1, nota2], media])
+            cont = window.prompt("Quer continuar? [S/N]")
+            cont = cont.toUpperCase()
+        } while (cont != "N")
+  
+        let c = 1
+        for (let valor of classe){
+            document.write(`${c}° - N1: ${valor[1][0]} N2: ${valor[1][1]} - Média: ${valor[2]} - ${valor[0]}<br>`)
+            c++
         }
     </script>
 </body>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex091</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># 4 jogadores jogam um dado com resultados aleatórios. Guardar resultados em um dicionário e colocar em ordem.<br>
+        # Vence o maior número.<br></p>
+    <script>  
+        function choice(array) {
+            let index = Math.floor(array.length * Math.random())
+            return array[index]
+        }
+
+        const numeros = Array(6).fill(1).map((x, y) => x + y)
+        let jogadores = new Object()
+        window.alert('Jogando os dados...')
+        
+        // Atribuindo os valores sorteados aos jogadores
+        for (let c=1; c<5; c++){
+            jogadores[`Jogador ${c}`] = choice(numeros)
+        }
+
+        // Escrevendo o valor sorteado e o nome do jogador
+        for (let [key, value] of Object.entries(jogadores)){
+            document.write(`O ${key} tirou ${value} no dado.<br>`)
+        }
+
+        // Rankeando os valores sorteados
+
+
+
+    </script>
+</body>
+</html>

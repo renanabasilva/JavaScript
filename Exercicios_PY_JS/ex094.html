@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex094</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler nome, sexo e idade de várias pessoas em um dicionário, e todos dicionários em uma lista e no final mostrar:<br>
+        # A. Total pessoas. B. Média de idades. C. Uma lista com todas mulheres. D. Lista com idades acima da média.<br></p>
+    <script>  
+        let pessoa = {}
+        let lista = []
+        totidade = mulheres = 0
+
+        do {
+            pessoa = {}
+            pessoa['nome'] = window.prompt("Nome:")
+            sexo = window.prompt("Sexo: [M/F]")
+            pessoa['sexo'] = sexo.toUpperCase()
+            pessoa['idade'] = Number.parseInt(window.prompt("Idade:"))
+            totidade += pessoa['idade']
+            if (pessoa['sexo'] == 'F'){
+                mulheres++
+            }
+            lista.push(pessoa)
+            cont = window.prompt("Quer continuar? [S/N]")
+            cont = cont.toUpperCase()
+        } while(cont != "N")
+        document.write(`O grupo tem ${lista.length} pessoas cadastradas.<br>`)
+        let medidade = totidade/lista.length
+        document.write(`A média de idades é de ${medidade.toFixed(1)} anos.<br>`)
+        document.write(`As mulheres cadastradas foram: `)
+        let i = 1
+        for (let value of lista){
+            if (value['sexo'] == 'F'){
+                document.write(`${value['nome']}`)
+                if (i < mulheres){
+                    document.write(`, `)
+                    i++
+                }
+            }
+        }
+        document.write(`<br>`)
+        document.write(`Lista de pessoas que estão acima da média de idade: <br>`)
+        for (let med of lista){
+            if (med['idade'] >= medidade){
+                for (let [key, value] of Object.entries(med)){
+                    document.write(`${key} = ${value};<br>`)
+                }
+            }            
+        }
+        document.write("ENCERRANDO...")
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex093</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Gerenciar um jogador de futebol. Ler nome, qtde partidas, qtde gols p/ cada partida(lista) e total de gols.<br></p>
+    <script>  
+        let jogador = {}
+        let gols = []
+        jogador['nome'] = window.prompt('Nome do jogador:')
+        let partidas = Number.parseInt(window.prompt(`Quantas partidas ${jogador['nome']} jogou?`))
+        for (let c=0; c < partidas; c++){
+            gols.push(Number.parseInt(window.prompt(`Quantos gols na partida ${c+1}?`)))
+        }
+        jogador['gols'] = gols
+        jogador['total'] = gols.reduce((a, b) => a + b, 0)
+        for (let [key, value] of Object.entries(jogador)){
+            document.write(`O campo ${key} tem o valor ${value}<br>`)
+        }
+        document.write(`<br>O jogador ${jogador['nome']} jogou ${jogador['gols'].length} partidas.<br>`)
+        for (let [index, value] of Object.entries(gols)){
+            document.write(`Na ${Number.parseInt(index)+1}° partida, ${jogador['nome']} fez ${value} gols.<br>`)
+        }
+        document.write(`Foram um total de ${jogador['total']} gols.`)
+
+    </script>
+</body>
+</html>

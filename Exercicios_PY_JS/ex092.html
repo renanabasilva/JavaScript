@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex092</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Ler nome, ano nasc, carteira de trab e cadastrar idade em um dicionário. Se a CTPS for diferente de 0, add tbm:<br>
+        # o ano de contratação e o salário. Calcular e acrescente com quantos anos a pessoa irá se aposentar.<br></p>
+    <script>  
+        let dados = {}
+        let ano = new Date().getFullYear()
+        dados['nome'] = window.prompt("Nome:")
+        let nasc = Number.parseInt(window.prompt("Ano de nascimento: "))
+        dados['idade'] = ano - nasc
+        dados['cpts'] = Number.parseInt(window.prompt("Carteira de Trabalho (0 não tem):"))
+        if (dados['cpts'] != 0){
+            dados['contratacao'] = Number.parseInt(window.prompt("Ano de contratação: "))
+            dados['salario'] = Number.parseFloat(window.prompt("Salário: R$"))
+            dados['aposentadoria'] = (dados['contratacao'] + 35) - nasc
+        }
+        for (let [key, value] of Object.entries(dados)){
+            document.write(`${key} tem o valor ${value}<br>`)
+        }
+    </script>
+</body>
+</html>

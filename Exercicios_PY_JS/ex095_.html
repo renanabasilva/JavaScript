@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex095</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Aprimorar ex093 - para vários jogadores e visualizar detalhes de aproveitamento de cada jogador.<br></p>
+    <script>  
+        let jogador = {}
+        let time = []
+        let gols = []
+        do {
+            jogador = {}
+            gols = []
+            jogador['nome'] = window.prompt("Nome do jogador:")
+            let partidas = Number.parseInt(window.prompt(`Quantas partidas ${jogador['nome']} jogou?`))
+            for (let c=0; c<partidas; c++){
+                gols.push(Number.parseInt(window.prompt(`Quantos gols na partida ${c+1}?`)))
+            }
+            jogador['gols'] = gols
+            jogador['total'] = gols.reduce((a, b) => a + b, 0)
+            time.push(jogador)
+
+            cont = window.prompt("Quer continuar? [S/N]")
+            cont = cont.toUpperCase()
+        } while(cont != "N")
+
+        let c = 0
+        for (let jog of time){
+            document.write(`${c+1} ${jog['nome']} ${jog['gols']} ${jog['total']}<br>`)
+            c++
+        }
+    </script>
+</body>
+</html>

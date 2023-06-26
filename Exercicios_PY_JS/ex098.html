@@ -17,9 +17,43 @@
     <p># Função contador() receber 3 parâmetros: Inicio, fim e passo e realizar a contagem.<br>
         # Fazer 3 contagens: a) De 1 até 10 de 1 em 1. b) De 10 até 0, de 2 em 2. c) Contagem personalizada.<br></p>
     <script>  
-        function cont_prog(i, f, p){
-            
+        function cont_progr(i, f, p){
+            for (let c=i; c <= f; c += p){
+                document.write(` ${c}`)
+            }
+            document.write(`<br><br>`)
         }
+
+        function cont_regre(i, f, p){
+            for (let c=i; c >= f; c -= p){
+                document.write(` ${c}`)
+            }
+            document.write(`<br><br>`)
+        }
+
+        function contador(i, f, p){
+            if (p == 0){
+                p = 1
+            }
+            if (p < 0){
+                p = p * (-1)
+            }
+            document.write(`Contagem de ${i} até ${f} de ${p} em ${p}<br>`)
+            if (i < f){
+                cont_progr(i, f, p)
+            } else if (i > f){
+                cont_regre(i, f, p)
+            }
+        }
+
+        contador(1, 10, 1)
+        contador(10, 1, 2)
+
+        let inicio = Number.parseInt(window.prompt("Valor de início: "))
+        let fim = Number.parseInt(window.prompt("Valor final: "))
+        let passo = Number.parseInt(window.prompt("Passo: "))
+        contador(inicio, fim, passo)
+
     </script>
 </body>
 </html>

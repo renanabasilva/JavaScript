@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex100</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Criar lista números e funções sorteio() para sortear 5 numeros e inserir na lista. Depois, usar função somaPar() para somar todos os pares sorteados.<br></p>
+    <script>  
+
+        const array = Array(10).fill(0).map((x, y) => x + y)
+        
+        function choice(array) {
+            let index = Math.floor(array.length * Math.random())
+            return array[index]
+        }
+        
+        function sorteio(num){
+            document.write(`Sorteando 5 valores da lista: `)
+            for (let i= 0; i < 5; i++){
+                num.push(choice(array))
+                document.write(` ${num[i]}`)                
+            }
+            document.write(`<br>PRONTO!<br>`)
+        }
+
+        function somaPar(num){
+            let soma = 0
+            document.write(`Somando os valores pares de ${num}, temos `)
+            for (let j of num){
+                if ( j % 2 == 0){
+                    soma += j
+                }
+            }
+            document.write(` ${soma}`)
+        }
+
+        numeros = []
+        sorteio(numeros)
+        somaPar(numeros)        
+    </script>
+</body>
+</html>

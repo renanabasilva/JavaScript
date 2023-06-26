@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex099</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Função maior() recebe vários parâmetros com valores inteiros. Analizar todos e dizer qual é o maior.<br></p>
+    <script>  
+        function maior(val){
+            document.write('Analizando os valores passados...<br>')
+            if (val.length == 0){
+                document.write("A sequência não possuí números.<br>")
+            } else {
+                var maiorn = Math.max(...val)
+                for (let i of val){
+                    document.write(` ${i}`)
+                }
+                document.write(`<br>Foram informados ${val.length} valores ao todo.<br>`)
+                document.write(`O maior valor informado foi ${maiorn}.<br><br>`)
+            }
+        }
+        let lista = [4, 6, 3, 8, 0, 7]
+        maior(lista)
+        maior([2, 9, 4, 5, 7, 1])
+        maior([4, 7, 9])
+        maior([1, 2])
+        maior([6])
+        maior([])
+    </script>
+</body>
+</html>

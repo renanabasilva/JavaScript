@@ -14,23 +14,28 @@
     </style>
 </head>
 <body>
-    <p># Criar função fatorial(), receber 2 parâmetros, o número e 'show' (tipo lógico) pra mostrar ou não o processo do cálc<br></p>
+    <p># Função ficha(), receber 2 parâm. opcionais: nome de um jogador e quantos gols marcou. Retornar a ficha do jogador.<br><br></p>
     <script>  
-        function fatorial(n, show = false){
-            let f = 1
-            for (let c = n; c > 0; c--){
-                f *= c
-                if (show){
-                    document.write(` ${c} `)
-                }
-                if (c > 1){
-                    document.write('x')
-                }
-            }
-            document.write(" = ")
-            return f
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
         }
-        document.write(fatorial(5, show = true))
+
+        function ficha(jog = 'desconhecido', gols=0){
+            document.write(`O jogador ${jog} fez ${gols} gol(s) no campeonato.`)
+        }
+
+        let nome = window.prompt("Nome do jogador")
+        if (nome.trim() == ''){
+            nome = undefined
+        }
+
+        let gol = Number.parseInt(window.prompt("Número de gols: "))
+        if (isNumeric(gol)){
+            gol = Number.parseInt(gol)
+        } else {
+            gol = 0
+        }
+        ficha(nome, gol)
     </script>
 </body>
 </html>

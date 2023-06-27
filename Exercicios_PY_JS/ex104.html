@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex104</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Função leiaint() para funcionar igual a função input(), só que fazendo validação para aceitar apenas valores numéricos.<br><br></p>
+    <script>  
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+        
+        function leiaInt(text){
+            let value = 0
+            while (true){
+                let num = window.prompt(text)
+                if (isNumeric(num)){
+                    value = Number.parseInt(num)
+                    break
+                } else {
+                    window.alert("Erro! Digite um número inteiro válido.")
+                }
+            }
+            return value
+        }
+
+        let number = leiaInt("Digite um número inteiro: ")
+        document.write(`Você acabou de digitar o número ${number}`)
+    </script>
+</body>
+</html>

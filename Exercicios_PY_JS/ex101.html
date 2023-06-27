@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex101</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Criar função voto(), receber ano nasc e retornar um valor literal, entre voto: Negado, Opcional ou Obrigatório.<br></p>
+    <script>  
+        function voto(ano){
+            let anoAtual = new Date().getFullYear()
+            let idade = anoAtual - ano
+            if (idade < 16){
+                return document.write(`Com ${idade} anos o voto é: NEGADO!`)
+            } else if (16 <= idade && idade < 18 || idade >= 65){
+                return document.write(`Com ${idade} anos o voto é: OPCIONAL!`)
+            } else {
+                return document.write(`Com ${idade} anos o voto é: OBRIGATÓRIO!`)
+            }
+        }
+
+        let nasc = Number.parseInt(window.prompt("Em que ano você nasceu?"))
+        voto(nasc)
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex103</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p># Criar função fatorial(), receber 2 parâmetros, o número e 'show' (tipo lógico) pra mostrar ou não o processo do cálc<br></p>
+    <script>  
+        function fatorial(n, show = false){
+            let f = 1
+            for (let c = n; c > 0; c--){
+                f *= c
+                if (show){
+                    document.write(` ${c} `)
+                }
+                if (c > 1){
+                    document.write('x')
+                }
+            }
+            document.write(" = ")
+            return f
+        }
+        document.write(fatorial(5, show = true))
+    </script>
+</body>
+</html>

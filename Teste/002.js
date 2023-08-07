@@ -4,7 +4,7 @@
 function SearchingChallenge(str) {
 
     const token = 'x3nqi9hjk7d'
-    const kCharacter = Number.parseInt(str[0])
+    const kCharacter = Number.parseInt(str[0]);
     let longString = '';
 
     for (i = 1; i < str.length + 1; i++) {
@@ -13,12 +13,12 @@ function SearchingChallenge(str) {
             const substring = str.substring(i, j);
 
             if (substring.length > longString.length) {
-                const uniqueCharacters = []
+                const uniqueCharacters = [];
 
                 for (cont = 0; cont < substring.length; cont ++){
 
                     if (!uniqueCharacters.includes(substring.charAt(cont))){
-                        uniqueCharacters.push(substring.charAt(cont))
+                        uniqueCharacters.push(substring.charAt(cont));
                     }
                 }
 
@@ -32,8 +32,8 @@ function SearchingChallenge(str) {
     if (longString.length > 0){
         reversedLongString = reverseString(longString);
         reversedToken = reverseString(token);
-        const output = `${reversedLongString}:${reversedToken}`
-        return output
+        const output = `${reversedLongString}:${reversedToken}`;
+        return output;
 
     } else {
         return -1;
@@ -41,11 +41,11 @@ function SearchingChallenge(str) {
 }
 
 function reverseString(string){
-    var newString = ""
+    var newString = "";
     for (var i = string.length - 1; i >= 0; i--){
-        newString += string[i]
+        newString += string[i];
     }
-    return newString
+    return newString;
 }
 
 console.log(SearchingChallenge("2aabbcbbbadef"));

@@ -23,6 +23,20 @@ function* perguntas() {
 }
 
 const itp = perguntas()
-console.log(itp.next().value)
-console.log(itp.next('Renan').value)
-console.log(itp.next('Tenis').value)
+// console.log(itp.next().value)
+// console.log(itp.next('Renan').value)
+// console.log(itp.next('Tenis').value)
+
+
+function* contator(){
+  let i=0
+  while(true){
+    yield i++
+    if (i>5) break
+  }
+}
+
+const iterator = contator()
+for (let c of iterator){
+  console.log(c)
+}

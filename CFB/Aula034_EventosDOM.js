@@ -26,7 +26,7 @@ const cursos = [...document.querySelectorAll(".curso")]
 cursos.map((elemento) => {
   elemento.addEventListener("click", (evento) =>{
     const elemento = evento.target
-    elemento.classList.add("destaque")
+    elemento.classList.toggle("destaque")
     console.log(elemento.id)
     console.log(elemento.innerHTML)
   })

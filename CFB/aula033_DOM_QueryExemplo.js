@@ -9,6 +9,7 @@ const query_divTodas1 = [...document.querySelectorAll("div[class]")]      // Peg
 const query_divTodas2 = [...document.querySelectorAll("div > p")]        // Pega os elementos 'p' que estão dentro de uma 'div'
 const query_selecionados = [...document.querySelectorAll(".curso:not(.c2)")]        // Pega os elementos de .curso com excessão dos .c2
 const query_cursosTodos = [...document.querySelectorAll(".cursos")]     // querySelector seleciona os elementos a partir do CSS
+const todosRadios = document.querySelectorAll("input[type=radio]")      // Pega todos os inputs do tipo radio
 const query_cursosC1 = [...document.querySelectorAll(".c1, p")]
 const query_cursosC2 = [...document.querySelectorAll(".c2")]
 const query_cursoEspecial1 = document.querySelector("#c6")

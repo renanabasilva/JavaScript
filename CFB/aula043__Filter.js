@@ -12,6 +12,7 @@ cursos.map((el, chave) => {
   novoElemento.setAttribute("class", "curso c1")
   novoElemento.innerHTML = el
 
+  // Criando checkbox com radio
   const comandos = document.createElement("div")
   comandos.setAttribute("class", "comandos")
 
@@ -19,6 +20,7 @@ cursos.map((el, chave) => {
   rb.setAttribute("type", "radio")
   rb.setAttribute("name", "rb_curso")
 
+  // Adicionando criações no html
   comandos.appendChild(rb)
 
   novoElemento.appendChild(comandos)
@@ -28,9 +30,10 @@ cursos.map((el, chave) => {
 
 btnCursoSelecionado.addEventListener("click", (evt) => {
   const todosRadios = [...document.querySelectorAll("input[type=radio]")]
-  let radioSelecionado = todosRadios.filter((ele, key, arr) => {
-    return ele.checked
-  })
+  // let radioSelecionado = todosRadios.filter((ele, key, arr) => {
+  //   return ele.checked
+  // })
+  let radioSelecionado = todosRadios.filter(element => element.checked)    // Modo simplificado da arrow function
   radioSelecionado = radioSelecionado[0]
   // const cursoSelecionado = radioSelecionado.parentNode.parentNode.firstChild.textContent
   const cursoSelecionado = radioSelecionado.parentNode.previousSibling.textContent
@@ -54,7 +57,7 @@ btnCursoSelecionado.addEventListener("click", (evt) => {
 //   const comandos=document.createElement('div')
 //   comandos.setAttribute('class', 'comandos')
 
-//   const rb=document.createElement('input')       
+//   const rb=document.createElement('input')
 //   rb.setAttribute('id', 'x'+chave)
 //   rb.setAttribute('type', 'radio')
 //   rb.setAttribute('name', 'rb_curso')

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 53 de Javascript</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        border: none;
+        box-sizing: border-box;
+        font-size: large;
+      }
+
+      .valor {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+      }
+
+      .valor input {
+        background-color: #ddd;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .operacoes {
+        display: flex;
+      }
+
+      button {
+        width: 150px;
+        height: 40px;
+        margin-top: 5px;
+        border-radius: 10px;
+        background-color: #025;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="valor">
+      <label for="valor1">Valor 1</label>
+      <input type="text" value="0" name="valor1" id="valor1" />
+    </div>
+    <div class="valor">
+      <label for="valor2">Valor 2</label>
+      <input type="text" value="0" name="valor2" id="valor2" />
+    </div>
+    <div class="valor">
+      <label>Resultado</label>
+      <input
+        type="text"
+        value="0"
+        name="res"
+        id="res"
+        readonly
+        style="cursor: not-allowed"
+      />
+    </div>
+    <div class="operacoes">
+      <button id="btn_soma">+</button>
+      <button id="btn_subtracao">-</button>
+      <button id="btn_multiplicacao">x</button>
+      <button id="btn_divisao">/</button>
+    </div>
+    <script src="aula053__Array.js"></script>
+  </body>
+</html>

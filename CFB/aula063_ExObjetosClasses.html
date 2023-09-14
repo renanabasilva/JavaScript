@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 63 de Javascript</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        border: none;
+        box-sizing: border-box;
+        font-size: large;
+      }
+
+      .carros {
+        display: flex;
+        width: 100%;
+        border: 3px solid #000;
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      .carro {
+        display: flex;
+        width: 200px;
+        border: 3px solid #008;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #8cf;
+      }
+
+      .campoForm {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin-bottom: 10px;
+      }
+
+      .campoForm input {
+        background-color: #eee;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #000;
+      }
+
+      .campoForm button {
+        background-color: #888;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="criarCarro" id="criarCarro">
+      <div class="campoForm">
+        <label for="f_nome">Nome</label>
+        <input type="text" name="f_nome" id="f_nome" placeholder="" />
+      </div>
+      <div class="campoForm">
+        <label for="f_portas">Portas</label>
+        <input type="number" name="f_portas" id="f_portas" placeholder="0" />
+      </div>
+      <div class="campoForm">
+        <label for="f_blindagem">Blindagem</label>
+        <input
+          type="number"
+          name="f_blindagem"
+          id="f_blindagem"
+          placeholder="0"
+          disabled
+        />
+      </div>
+      <div class="campoForm">
+        <label for="f_municao">Munição</label>
+        <input
+          type="number"
+          name="f_municao"
+          id="f_municao"
+          placeholder="0"
+          disabled
+        />
+      </div>
+      <div class="campoForm">
+        <label>Tipo</label>
+        <div class="radio">
+          <input type="radio" name="f_tipo" id="f_tipoMilitar" value="m" />
+          <label for="f_tipoMilitar">Militar</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="f_tipo" id="f_tipoNormal" value="n" checked />
+          <label for="f_tipoNormal">Normal</label>
+        </div>
+      </div>
+      <div class="campoForm">
+        <button id="btn_addCarro">Adicionar</button>
+      </div>
+    </div>
+    <div id="carros" class="carros">
+
+    </div>
+    <script src="aula063__Objetos.js"></script>
+  </body>
+</html>

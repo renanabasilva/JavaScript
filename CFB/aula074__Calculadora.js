@@ -7,6 +7,8 @@ const tlimpar = document.querySelector("#tlimpar")
 const tigual = document.querySelector("#tigual")
 const tcpy = document.querySelector("#tcpy")
 const teste = document.querySelector("#teste")
+const calc_aba = document.querySelector("#calc_aba")
+const calc = document.querySelector("#calc")
 
 let sinal = false
 let decimal = false
@@ -67,4 +69,14 @@ tcpy.addEventListener('click', (evt)=>{
   // teste.select()  //mobile
   // teste.setSelectionRange(0,99999)  //mobile
   // navigator.clipboard.writeText(teste.value)
+})
+
+calc_aba.addEventListener("click", (evt) =>{
+  calc.classList.toggle("calc_exibir")
+  calc_aba.classList.toggle("calc_aba_rotate")
+  // if (calc.classList.contains("calc_exibir")){
+  //   evt.target.setAttribute("src", "seta_esquerda.svg")
+  // } else {
+  //   evt.target.setAttribute("src", "seta_direita.svg")    
+  // }
 })

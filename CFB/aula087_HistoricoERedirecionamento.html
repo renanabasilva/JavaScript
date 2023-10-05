@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 87 de Javascript</title>
+    <style>
+      * {
+        border: none;
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+
+      input, button {
+        margin-bottom: 10px;
+      }
+
+      input[type=url]{
+        border: 1px solid #000;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      button {
+        background-color: #eee;
+        padding: 5px 30px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cursos</h1>
+    <form>
+      <input type="url" name="url" id="url" placeholder="https://google.com" pattern="https://.*" size="30" required>
+      <button id="btn_url">Ir</button>
+    </form>
+
+    <script src="aula087__HistoricoERedirecionamento.js"></script>
+  </body>
+</html>

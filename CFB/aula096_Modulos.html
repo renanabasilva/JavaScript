@@ -11,30 +11,84 @@
         margin: 0px;
         box-sizing: border-box;
       }
-      
-      .objetos{
+
+      #form {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: calc(100%-20px);
-        padding: 10px;
-        margin: 10px;
+        flex-direction: column;
         border: 3px solid #888;
-        background-color: #eee;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+        width: 300px;
       }
 
-      .computador{
+      #campo {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      input[type="text"] {
         border: 1px solid #000;
-        background-color: #fff;
-        margin: 0px 5px;
+        padding: 5px;
+        border-radius: 5px;
+        width: 100%;
+      }
+
+      button {
+        background-color: #bbb;
+        padding: 10px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #listaContatos {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border: 3px solid #888;
+        border-radius: 5px;
+        margin: 5px;
+        width: calc(100%-10px);
+      }
+
+      .contato {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #000;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 5px;
       }
     </style>
   </head>
   <body>
     <div id="objetos" class="objetos"></div>
+    <div id="form">
+      <div id="campo">
+        <label for="f_nome">Nome</label>
+        <input type="text" id="f_nome" name="f_nome" />
+      </div>
+      <div id="campo">
+        <label for="f_telefone">Telefone</label>
+        <input type="text" id="f_telefone" name="f_telefone" />
+      </div>
+      <div id="campo">
+        <label for="f_email">E-mail</label>
+        <input type="text" id="f_email" name="f_email" />
+      </div>
+      <div id="botoes">
+        <button id="btn_gravar">Gravar</button>
+      </div>
+    </div>
+    <div id="listaContatos"></div>
     <script src="aula096__Modulos.js" type="module"></script>
   </body>
 </html>

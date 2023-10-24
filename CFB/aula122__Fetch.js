@@ -1,29 +1,17 @@
-const f_texto = document.querySelector("#f_texto");
-const p_texto = document.querySelector("#p_texto");
-const btn_texto = document.querySelector("#btn_texto");
+const p_temp = document.querySelector('#p_temp')
+const p_nivel = document.querySelector('#p_nivel')
+const p_pressao = document.querySelector('#p_pressao')
 
-btn_texto.addEventListener('click', (evt) => {
+const obterDados = () => {
+  const endpoint = 'https://estudo.renanabadev.repl.co/'
+  fetch(endpoint)
+    .then(res => res.json())
+    .then(dados => {
+      console.log(dados)
+      p_temp.innerHTML = `Temperatura: ${dados.temperatura}`
+      p_nivel.innerHTML = `Nivel: ${dados.nivel}`
+      p_pressao.innerHTML = `Pressão: ${dados.pressao}`
+    })
+}
 
-})
-
-let num = 10
-let curso = 'javascript'
-
-window.localStorage.setItem('numero', num)
-localStorage.setItem('nome', 'Renan')
-localStorage.setItem('idade', '31')
-localStorage.setItem('curso', curso)
-
-// alert(localStorage.length)
-// alert(localStorage.key(2 ))
-// alert(localStorage.getItem(localStorage.key(0)))
-
-// alert (localStorage.getItem('numero'))
-
-localStorage.clear()
-
-sessionStorage.setItem('nome', 'Renan')
-sessionStorage.setItem('idade', '31')
-sessionStorage.setItem('curso', curso)
-
-alert(sessionStorage.length)
+let intervalo = setInterval(obterDados, 1000)

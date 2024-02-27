@@ -1,0 +1,73 @@
+<div class="formattedText" data-external-links="">
+  <p>A manipulação do DOM é uma habilidade fundamental no desenvolvimento web. E mesmo que o  <code>.append()</code> seja uma das funções mais populares, existem várias outras que podem ser muito úteis. A seguir, vou detalhar algumas delas pra ficar familiarizado com outras formas de manipular o DOM:</p>
+<p>1 - <strong>.append():</strong></p>
+<p>Bastante utilizado durante o curso, esse método permite adicionar múltiplos nós e/ou <code>strings</code> de texto ao final de um elemento. Se você passar uma <code>string</code>, o método a trata como um texto e a adiciona diretamente.</p>
+<p>2 - <strong>.appendChild():</strong></p>
+<p>É um método mais antigo e é específico para inserir um único nó no final do elemento selecionado. Diferentemente do <code>.append()</code>, o <code>.appendChild()</code> não aceita <code>strings</code> diretamente. Se você quiser adicionar uma <code>string</code>, precisa criar um nó de texto primeiro.</p>
+<p>Exemplo:</p>
+<pre class="prettyprint"><code class="language-javascript hljs">
+<span class="hljs-keyword">let</span> div = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">"div"</span>);
+<span class="hljs-keyword">let</span> novoSpan = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">"span"</span>);
+div.<span class="hljs-title function_">appendChild</span>(novoSpan);
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>Por que é útil conhecer ambos?</p>
+<p>Enquanto <code>.append()</code> oferece mais flexibilidade, permitindo inserir múltiplos elementos e/ou texto, <code>.appendChild()</code> tem amplo suporte e é mais específico na sua tarefa. Para desenvolvedores que estão focados no front-end, é fundamental conhecer ambos os métodos, para poder decidir qual é o mais adequado conforme a situação e o ambiente em que estão trabalhando.</p>
+<p>3 - <strong>.prepend():</strong></p>
+<p>Esse método insere conteúdo no início de um elemento selecionado.</p>
+<p>Por que é útil? </p>
+<p>Se você deseja adicionar algo no topo de uma lista ou no começo de um container, esta é a função a ser usada.</p>
+<p>Exemplo:</p>
+<pre class="prettyprint"><code class="language-javascript hljs">
+<span class="hljs-keyword">let</span> lista = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">"ul"</span>);
+lista.<span class="hljs-title function_">prepend</span>(<span class="hljs-string">"Item 0"</span>);  <span class="hljs-comment">// Este item será inserido no começo da lista.</span>
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>4 - <strong>.insertBefore():</strong></p>
+<p>Permite inserir um elemento, especificamente, antes de outro elemento.</p>
+<p>Por que é útil?</p>
+<p>É muito útil quando você precisa inserir um item em uma posição específica, e não apenas no começo ou fim.</p>
+<p>Exemplo:</p>
+<pre class="prettyprint"><code class="language-js hljs language-javascript">
+<span class="hljs-keyword">let</span> novoItem = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">"li"</span>);
+novoItem.<span class="hljs-property">textContent</span> = <span class="hljs-string">"Item intermediário"</span>;
+<span class="hljs-keyword">let</span> lista = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">"ul"</span>);
+<span class="hljs-keyword">let</span> itemEspecifico = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">"#itemEspecifico"</span>);
+lista.<span class="hljs-title function_">insertBefore</span>(novoItem, itemEspecifico); <span class="hljs-comment">// Insere o novo item antes do item especificado.</span>
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>5 - <strong>.insertAdjacentElement()</strong>, <strong>.insertAdjacentHTML()</strong> e <strong>.insertAdjacentText()</strong>:</p>
+<p>Oferecem controle preciso sobre onde você deseja inserir um novo elemento, seja ele um texto, HTML ou elemento, em relação a um elemento existente.</p>
+<p>Por que é útil? </p>
+<p>Permitem inserções em quatro posições diferentes: antes, depois, no início ou no final do elemento selecionado.</p>
+<p>Exemplo:</p>
+<pre class="prettyprint"><code class="language-js hljs language-javascript">
+<span class="hljs-keyword">let</span> div = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">"div"</span>);
+div.<span class="hljs-title function_">insertAdjacentHTML</span>(<span class="hljs-string">'beforebegin'</span>, <span class="hljs-string">'&lt;p&gt;Antes da div&lt;/p&gt;'</span>);
+div.<span class="hljs-title function_">insertAdjacentHTML</span>(<span class="hljs-string">'afterend'</span>, <span class="hljs-string">'&lt;p&gt;Depois da div&lt;/p&gt;'</span>);
+div.<span class="hljs-title function_">insertAdjacentHTML</span>(<span class="hljs-string">'afterbegin'</span>, <span class="hljs-string">'&lt;p&gt;No começo da div&lt;/p&gt;'</span>);
+div.<span class="hljs-title function_">insertAdjacentHTML</span>(<span class="hljs-string">'beforeend'</span>, <span class="hljs-string">'&lt;p&gt;No final da div&lt;/p&gt;'</span>);
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>6 - <strong>.replaceChild():</strong></p>
+<p>Substitui um elemento filho por outro.</p>
+<p>Por que é útil? </p>
+<p>Se você precisa atualizar ou trocar um elemento por um novo, você pode usar este método.</p>
+<p>Exemplo:</p>
+<pre class="prettyprint"><code class="language-javascript hljs">
+<span class="hljs-keyword">let</span> lista = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">"ul"</span>);
+<span class="hljs-keyword">let</span> antigoItem = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">"#antigoItem"</span>);
+<span class="hljs-keyword">let</span> novoItem = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">"li"</span>);
+novoItem.<span class="hljs-property">textContent</span> = <span class="hljs-string">"Item substituto"</span>;
+lista.<span class="hljs-title function_">replaceChild</span>(novoItem, antigoItem); <span class="hljs-comment">// Substitui o item antigo pelo novo.</span>
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>7 - <strong>.cloneNode():</strong></p>
+<p>Duplica um elemento.</p>
+<p>Por que é útil? </p>
+<p>Se você precisa de uma cópia exata de um elemento (com ou sem seus filhos), este método é perfeito.</p>
+<p>Exemplo:</p>
+<pre class="prettyprint"><code class="language-js hljs language-javascript">
+<span class="hljs-keyword">let</span> item = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">"li"</span>);
+<span class="hljs-keyword">let</span> itemDuplicado = item.<span class="hljs-title function_">cloneNode</span>(<span class="hljs-literal">true</span>); <span class="hljs-comment">// Com "true" ele copia todos os filhos do item.</span>
+<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">"ul"</span>).<span class="hljs-title function_">appendChild</span>(itemDuplicado);
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<blockquote>
+<p>Espero que com essas descrições e exemplos, a manipulação do DOM fique um pouco mais clara para você. É uma jornada, mas com prática e experimentação, essas funções se tornarão naturais. Boa sorte e <strong>happy coding</strong>!</p>
+</blockquote>
+</div>
